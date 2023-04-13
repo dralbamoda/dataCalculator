@@ -72,12 +72,14 @@ const setValue = (animate = false) => {
 			if (total < dataInGB) {
 				collector.textContent = `${(total).toFixed(2)}GB`;
 				totalPrice.textContent = `${getCost(total).toFixed(2)}`;
+				hero.textContent = `${total.toFixed(2)}`;
 				topGraph.style.setProperty("--amount", `${getDegrees(total) > 358 ? 358 : getDegrees(total)}deg`);
 				total++;
 			} else {
 				clearInterval(animatedInterval);
 				collector.textContent = `${dataInGB.toFixed(2)}GB`;
 				totalPrice.textContent = `${getCost(dataInGB).toFixed(2)}`;
+				hero.textContent = `${dataInGB.toFixed(2)}`;
 				topGraph.style.setProperty("--amount", `${degrees > 358 ? 358 : degrees}deg`);
 			}
 		}, 1);
