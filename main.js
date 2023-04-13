@@ -39,7 +39,19 @@ const setRanges = (event) => {
 	setValue();
 };
 
-const setValue = () => {
+const getCost =  (dataInGB) => {
+	const textPrice = textValues
+		? parseFloat(Object.values(textValues).find((v) => v.checked).value)
+		: 0;
+	const costPerGig = dataInGB * cpg;
+	return costPerGig + textPrice + platformFee;
+}
+
+const getDegrees = (dataInGB) => {
+	return ((dataInGB) / 239.75) * 360;
+}
+
+const setValue = (animate = false) => {
 	const currentValue = Object.values(currentValues).reduce(
 		(acc, v) => acc + v,
 		0
@@ -47,17 +59,29 @@ const setValue = () => {
 	const dataInGB = currentValue / 1000;
 	collector.textContent = `${dataInGB.toFixed(2)}GB`;
 	hero.textContent = `${dataInGB.toFixed(2)}`;
-	const degrees = ((dataInGB * 100) / 239.75) * 3.6;
+	const degrees = getDegrees(dataInGB);
 	topGraph.style.setProperty("--amount", `${degrees > 358 ? 358 : degrees}deg`);
-	const textPrice = textValues
-		? parseFloat(Object.values(textValues).find((v) => v.checked).value)
-		: 0;
+	totalPrice.textContent = `${getCost(dataInGB).toFixed(2)}`;
 	const optimiser = optimiserValues
 		? Object.values(optimiserValues).find((v) => v.checked)?.value || 0
 		: 0;
-	const costPerGig = dataInGB * cpg;
-	const totalCost = costPerGig + textPrice + platformFee;
-	totalPrice.textContent = `${totalCost.toFixed(2)}`;
+	
+	let total = 0;
+	if (animate) {
+		const animatedInterval = setInterval(() => {
+			if (total < dataInGB) {
+				collector.textContent = `${(total).toFixed(2)}GB`;
+				totalPrice.textContent = `${getCost(total).toFixed(2)}`;
+				topGraph.style.setProperty("--amount", `${getDegrees(total) > 358 ? 358 : getDegrees(total)}deg`);
+				total++;
+			} else {
+				clearInterval(animatedInterval);
+				collector.textContent = `${dataInGB.toFixed(2)}GB`;
+				totalPrice.textContent = `${getCost(dataInGB).toFixed(2)}`;
+				topGraph.style.setProperty("--amount", `${degrees > 358 ? 358 : degrees}deg`);
+			}
+		}, 1);
+	}
 };
 
 values.forEach((v) => v.addEventListener("input", setRanges));
@@ -66,4 +90,4 @@ optimiserValues.forEach((v) => v.addEventListener("click", setValue));
 
 // because safari
 mockDataLists();
-setValue();
+setValue(true);

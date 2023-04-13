@@ -4,7 +4,8 @@
   "description": "Range slider calculator",
   "main": "main.js",
   "scripts": {
-    "start": "http-server .",
+    "start": "npm run serve",
+    "serve": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,10 @@
   },
   "homepage": "https://github.com/dralbamoda/dataCalculator#readme",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }

@@ -1,0 +1,43 @@
+html,
+body {
+	--darkbg: #111;
+	--darkfg: #eee;
+	--primary: #50f40c;
+	--secondary: #0f261f;
+	--tertiary: #789194;
+	--grey: #e9edea;
+	--track: var(--grey);
+	--background: #fff;
+	--track-color: var(--grey);
+	font-size: 16px;
+	font-family: sans-serif;
+	background-color: var(--background);
+	color: var(--darkfg);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	place-items: center;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	html,
+	body {
+		--background: var(--darkbg);
+		background-color: var(--background);
+	}
+
+	html::before {
+		background-color: var(--background);
+	}
+} */
+
+.caps {
+	text-transform: uppercase;
+}
