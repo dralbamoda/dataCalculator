@@ -26,6 +26,17 @@ body {
 	place-items: center;
 }
 
+.header__sticky {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background-color: var(--background);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* @media (prefers-color-scheme: dark) {
 	html,
 	body {
