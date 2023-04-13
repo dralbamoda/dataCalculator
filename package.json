@@ -1,0 +1,29 @@
+{
+  "name": "data-calculator",
+  "version": "0.0.1",
+  "description": "Range slider calculator",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dralbamoda/dataCalculator.git"
+  },
+  "keywords": [
+    "range",
+    "sliders",
+    "data",
+    "calculator"
+  ],
+  "author": "dralbamoda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dralbamoda/dataCalculator/issues"
+  },
+  "homepage": "https://github.com/dralbamoda/dataCalculator#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
