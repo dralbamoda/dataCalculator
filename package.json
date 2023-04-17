@@ -26,9 +26,20 @@
   "homepage": "https://github.com/dralbamoda/dataCalculator#readme",
   "devDependencies": {
     "http-server": "^14.1.1",
-    "nodemon": "^2.0.22"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "nodemon": "^2.0.22",
+    "prettier": "2.8.7"
   },
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

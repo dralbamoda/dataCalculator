@@ -1,40 +1,40 @@
 html,
 body {
-	--darkbg: #111;
-	--darkfg: #eee;
-	--primary: #50f40c;
-	--secondary: #0f261f;
-	--tertiary: #789194;
-	--grey: #e9edea;
-	--track: var(--grey);
-	--background: #fff;
-	--track-color: var(--grey);
-	font-size: 16px;
-	font-family: sans-serif;
-	background-color: var(--background);
-	color: var(--darkfg);
+  --darkbg: #111;
+  --darkfg: #eee;
+  --primary: #50f40c;
+  --secondary: #0f261f;
+  --tertiary: #789194;
+  --grey: #e9edea;
+  --track: var(--grey);
+  --background: #fff;
+  --track-color: var(--grey);
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: var(--background);
+  color: var(--darkfg);
 }
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-	display: grid;
-	place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .header__sticky {
-	position: sticky;
-	top: 0;
-	z-index: 2;
-	background-color: var(--background);
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--background);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -50,5 +50,5 @@ body {
 } */
 
 .caps {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }

@@ -1,168 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Calculator</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/dataCalculator.css">
-</head>
-<body>
-  <form class="calculator">
-    <div class="header__sticky">
-      <div class="calculator__graph">
-        <div class="hero">
-          <div id="hero" class="hero__number">00.00</div>
-          <div class="hero__units caps">Gigabytes</div>
-          <div class="hero__period caps">Over 30 Days</div>
-        </div>
-      </div>
-    </div>
-    <div class="calculator__sliders">
-      <div>
-        <label for="web">Web Browsing</label>
-        <input type="range" id="web" name="web" list="web-markers" max="500" value="300" class="data calculator__data" />
-        <datalist class="calculator__datalist" id="web-markers">
-          <option value="0" label="0MB"></option>
-          <option value="100" label="100MB"></option>
-          <option value="200" label="200MB"></option>
-          <option value="300" label="300MB"></option>
-          <option value="400" label="400MB"></option>
-          <option value="500" label="500MB"></option>
-        </datalist>
-      </div>
-      <div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dataCalculator.css" />
+  </head>
 
-        <label for="social">Social Networking</label>
-        <input type="range" id="social" name="social" list="social-markers" max="500" value="200" class="data calculator__data" />
-        <datalist class="calculator__datalist" id="social-markers">
-          <option value="0" label="0MB"></option>
-          <option value="100" label="100MB"></option>
-          <option value="200" label="200MB"></option>
-          <option value="300" label="300MB"></option>
-          <option value="400" label="400MB"></option>
-          <option value="500" label="500MB"></option>
-        </datalist>
-      </div>
-      <div>
-        <label for="emails">Emails</label>
-        <input type="range" id="emails" name="emails" list="emails-markers" max="1250" value="250" class="data calculator__data" />
-        <datalist class="calculator__datalist" id="emails-markers">
-          <option value="0" label="0MB"></option>
-          <option value="250" label="250MB"></option>
-          <option value="500" label="500MB"></option>
-          <option value="750" label="750MB"></option>
-          <option value="1000" label="1GB"></option>
-          <option value="1250" label="1.25G"></option>
-        </datalist>
-      </div>
-      <div>
-        <label for="music">Music</label>
-        <input type="range" id="music" name="music" list="music-markers" max="2500" value="1000" class="data calculator__data" />
-        <datalist class="calculator__datalist" id="music-markers">
-          <option value="0" label="0MB"></option>
-          <option value="500" label="500MB"></option>
-          <option value="1000" label="1GB"></option>
-          <option value="1500" label="1.5G"></option>
-          <option value="2000" label="2GB"></option>
-          <option value="2500" label="2.5GB"></option>
-        </datalist>
-      </div>
-      <div>
-        <label for="video">Video</label>
-        <input type="range" id="video" name="video" list="video-markers" max="30000" value="5000" class="data calculator__data" />
-        <datalist class="calculator__datalist" id="video-markers">
-          <option value="0" label="0MB"></option>
-          <option value="1000" label="1GB"></option>
-          <option value="2000" label="2GB"></option>
-          <option value="5000" label="5GB"></option>
-          <option value="10000" label="10GB"></option>
-          <option value="30000" label="30GB"></option>
-        </datalist>
-      </div>
-      <div>
-        <label for="tv">TV/movie streaming</label>
-        <input type="range" id="tv" name="tv" list="tv-markers" max="200000" value="100000" class="data calculator__data" />
-        <datalist class="calculator__datalist" id="tv-markers">
-          <option value="0" label="0MB"></option>
-          <option value="10000" label="10GB"></option>
-          <option value="20000" label="20GB"></option>
-          <option value="50000" label="50GB"></option>
-          <option value="100000" label="100GB"></option>
-          <option value="200000" label="200GB"></option>
-        </datalist>
-      </div>
-      <div>
-        <label for="apps">Apps and gaming</label>
-        <input type="range" id="apps" name="apps" list="apps-markers" max="5000" value="500" class="data calculator__data" />
-        <datalist class="calculator__datalist" id="apps-markers">
-          <option value="0" label="0MB"></option>
-          <option value="2500" label="2.5GB"></option>
-          <option value="5000" label="5GB"></option>
-        </datalist>
-      </div>
-
-      <div class="calculator__section-label">Talk/Text</div>
-      <div class="calculator__options">
-        <label for="talk-1">
-          <input type="radio" id="talk-1" name="talk[]" value="4.50" class="data-text calculator__data-text-option" checked /> Unlimited: <b>$4.50</b>
-        </label>
-        <label for="talk-2">
-          <input type="radio" id="talk-2" name="talk[]" value="2.50" class="data-text calculator__data-text-option" /> 150: <b>$2.50</b>
-        </label>
-        <label for="talk-3">
-          <input type="radio" id="talk-3" name="talk[]" value="1.50" class="data-text calculator__data-text-option" /> 50: <b>$1.50</b>
-        </label>
-        <label for="talk-4">
-          <input type="radio" id="talk-4" name="talk[]" value="0" class="data-text calculator__data-text-option" /> None: <b>$0</b>
-        </label>
-      </div>
-
-      <div class="calculator__option-row">
-        <label for="optimiser-1">
-          <span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.00622 7.416C8.42288 6.28094 10.1847 5.66377 12 5.66667C13.8889 5.66667 15.6249 6.32089 16.9938 7.416L18.044 6.3658C18.1773 6.2325 18.3934 6.2325 18.5267 6.3658L19.3009 7.13997C19.4342 7.27327 19.4342 7.48939 19.3009 7.62269L18.2507 8.67289C19.1908 9.84991 19.7796 11.2685 19.9492 12.7653C20.1187 14.2622 19.8622 15.7765 19.2091 17.134C18.5561 18.4915 17.533 19.637 16.2576 20.4387C14.9822 21.2405 13.5064 21.6658 12 21.6658C10.4936 21.6658 9.01776 21.2405 7.74239 20.4387C6.46703 19.637 5.44394 18.4915 4.79087 17.134C4.1378 15.7765 3.88128 14.2622 4.05084 12.7653C4.22041 11.2685 4.80916 9.84991 5.74934 8.67289L4.69931 7.62358C4.56593 7.49029 4.56589 7.27411 4.69922 7.14078L5.47331 6.36669C5.60661 6.23339 5.82273 6.23339 5.95603 6.36669L7.00622 7.41689V7.416ZM12 19.8889C12.8171 19.8889 13.6262 19.7279 14.3811 19.4152C15.1361 19.1025 15.822 18.6442 16.3998 18.0664C16.9776 17.4886 17.4359 16.8027 17.7486 16.0478C18.0613 15.2929 18.2222 14.4838 18.2222 13.6667C18.2222 12.8495 18.0613 12.0404 17.7486 11.2855C17.4359 10.5306 16.9776 9.84467 16.3998 9.26689C15.822 8.6891 15.1361 8.23078 14.3811 7.91808C13.6262 7.60538 12.8171 7.44444 12 7.44444C10.3498 7.44444 8.76712 8.1 7.60023 9.26689C6.43333 10.4338 5.77778 12.0164 5.77778 13.6667C5.77778 15.3169 6.43333 16.8995 7.60023 18.0664C8.76712 19.2333 10.3498 19.8889 12 19.8889ZM8.44445 3.34133C8.44445 3.15282 8.59727 3 8.78578 3H15.2142C15.4027 3 15.5556 3.15282 15.5556 3.34133V4.43644C15.5556 4.62496 15.4027 4.77778 15.2142 4.77778H8.78578C8.59727 4.77778 8.44445 4.62496 8.44445 4.43644V3.34133Z" fill="#789194" />
-              <path d="M15.5225 14.6743L13.2131 13.341L15.2154 9.87304L8.47525 12.6584L10.7847 13.9917L8.78466 17.4558L15.5225 14.6743Z" fill="#789194" />
-            </svg> Speed Optimiser</span> <input type="radio" id="optimiser-1" name="optimiser[]" value="-4.50" class="data-optimiser calculator__data-text-option" />
-        </label>
-      </div>
-
-      <div class="calculator__option-row">
-        <label for="optimiser-2">
-          <span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="24" height="24" fill="none" />
-              <g clip-path="url(#clip0_3236_8728)">
-                <path d="M20 20H4C2.89543 20 2 19.1046 2 18V6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20ZM4 6V18H20V6H4Z" fill="#789194" />
-                <path d="M6.373 16.0004L5 14.6564L9.856 9.90036C10.2383 9.52884 10.8467 9.52884 11.229 9.90036L13.456 12.0814L16.8059 8.85433L18.3135 8.67236L18.1789 10.1983L14.144 14.1004C13.7617 14.4719 13.1533 14.4719 12.771 14.1004L10.543 11.9184L6.373 16.0004Z" fill="#789194" />
-              </g>
-              <defs>
-                <clipPath id="clip0_3236_8728">
-                  <rect width="24" height="24" fill="none" />
-                </clipPath>
-              </defs>
-            </svg> Video Optimiser</span> <input type="radio" id="optimiser-2" name="optimiser[]" value="-10.00" class="data-optimiser calculator__data-text-option" />
-        </label>
-      </div>
-
-      <div class="calculator__total-cards">
-        <div class="calculator__total-card">
-          <span class="caps">Your Calculation</span>
-          <div class="calculator__total-card__value">
-            <span id="total">0</span>
+  <body class="calculator">
+    <main class="page">
+      <section class="page__section">
+        <div class="header__sticky">
+          <div class="calculator__graph">
+            <div class="hero">
+              <div id="hero" class="hero__number">00.00</div>
+              <div class="hero__units caps">Gigabytes</div>
+              <div class="hero__period caps">Over 30 Days</div>
+            </div>
           </div>
-          per month
         </div>
-        <div class="calculator__total-card calculator__total-card--primary">
-          <span class="caps">Your Price</span>
-          <div class="calculator__total-card__value">
-            $<span id="total-price">0.00</span>
+      </section>
+      <section class="page__section">sometest</section>
+      <section class="page__section">sometest</section>
+    </main>
+    <form>
+      <div class="calculator__sliders">
+        <div>
+          <label for="web">Web Browsing</label>
+          <input
+            type="range"
+            id="web"
+            name="web"
+            list="web-markers"
+            max="500"
+            value="300"
+            class="data calculator__data"
+          />
+          <datalist class="calculator__datalist" id="web-markers">
+            <option value="0" label="0MB"></option>
+            <option value="100" label="100MB"></option>
+            <option value="200" label="200MB"></option>
+            <option value="300" label="300MB"></option>
+            <option value="400" label="400MB"></option>
+            <option value="500" label="500MB"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="social">Social Networking</label>
+          <input
+            type="range"
+            id="social"
+            name="social"
+            list="social-markers"
+            max="500"
+            value="200"
+            class="data calculator__data"
+          />
+          <datalist class="calculator__datalist" id="social-markers">
+            <option value="0" label="0MB"></option>
+            <option value="100" label="100MB"></option>
+            <option value="200" label="200MB"></option>
+            <option value="300" label="300MB"></option>
+            <option value="400" label="400MB"></option>
+            <option value="500" label="500MB"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="emails">Emails</label>
+          <input
+            type="range"
+            id="emails"
+            name="emails"
+            list="emails-markers"
+            max="1250"
+            value="250"
+            class="data calculator__data"
+          />
+          <datalist class="calculator__datalist" id="emails-markers">
+            <option value="0" label="0MB"></option>
+            <option value="250" label="250MB"></option>
+            <option value="500" label="500MB"></option>
+            <option value="750" label="750MB"></option>
+            <option value="1000" label="1GB"></option>
+            <option value="1250" label="1.25G"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="music">Music</label>
+          <input
+            type="range"
+            id="music"
+            name="music"
+            list="music-markers"
+            max="2500"
+            value="1000"
+            class="data calculator__data"
+          />
+          <datalist class="calculator__datalist" id="music-markers">
+            <option value="0" label="0MB"></option>
+            <option value="500" label="500MB"></option>
+            <option value="1000" label="1GB"></option>
+            <option value="1500" label="1.5G"></option>
+            <option value="2000" label="2GB"></option>
+            <option value="2500" label="2.5GB"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="video">Video</label>
+          <input
+            type="range"
+            id="video"
+            name="video"
+            list="video-markers"
+            max="30000"
+            value="5000"
+            class="data calculator__data"
+          />
+          <datalist class="calculator__datalist" id="video-markers">
+            <option value="0" label="0MB"></option>
+            <option value="1000" label="1GB"></option>
+            <option value="2000" label="2GB"></option>
+            <option value="5000" label="5GB"></option>
+            <option value="10000" label="10GB"></option>
+            <option value="30000" label="30GB"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="tv">TV/movie streaming</label>
+          <input
+            type="range"
+            id="tv"
+            name="tv"
+            list="tv-markers"
+            max="200000"
+            value="100000"
+            class="data calculator__data"
+          />
+          <datalist class="calculator__datalist" id="tv-markers">
+            <option value="0" label="0MB"></option>
+            <option value="10000" label="10GB"></option>
+            <option value="20000" label="20GB"></option>
+            <option value="50000" label="50GB"></option>
+            <option value="100000" label="100GB"></option>
+            <option value="200000" label="200GB"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="apps">Apps and gaming</label>
+          <input
+            type="range"
+            id="apps"
+            name="apps"
+            list="apps-markers"
+            max="5000"
+            value="500"
+            class="data calculator__data"
+          />
+          <datalist class="calculator__datalist" id="apps-markers">
+            <option value="0" label="0MB"></option>
+            <option value="2500" label="2.5GB"></option>
+            <option value="5000" label="5GB"></option>
+          </datalist>
+        </div>
+
+        <div class="calculator__section-label">Talk/Text</div>
+        <div class="calculator__options">
+          <label for="talk-1">
+            <input
+              type="radio"
+              id="talk-1"
+              name="talk[]"
+              value="4.50"
+              class="data-text calculator__data-text-option"
+              checked
+            />
+            Unlimited: <b>$4.50</b>
+          </label>
+          <label for="talk-2">
+            <input
+              type="radio"
+              id="talk-2"
+              name="talk[]"
+              value="2.50"
+              class="data-text calculator__data-text-option"
+            />
+            150: <b>$2.50</b>
+          </label>
+          <label for="talk-3">
+            <input
+              type="radio"
+              id="talk-3"
+              name="talk[]"
+              value="1.50"
+              class="data-text calculator__data-text-option"
+            />
+            50: <b>$1.50</b>
+          </label>
+          <label for="talk-4">
+            <input
+              type="radio"
+              id="talk-4"
+              name="talk[]"
+              value="0"
+              class="data-text calculator__data-text-option"
+            />
+            None: <b>$0</b>
+          </label>
+        </div>
+
+        <div class="calculator__option-row">
+          <label for="optimiser-1">
+            <span
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.00622 7.416C8.42288 6.28094 10.1847 5.66377 12 5.66667C13.8889 5.66667 15.6249 6.32089 16.9938 7.416L18.044 6.3658C18.1773 6.2325 18.3934 6.2325 18.5267 6.3658L19.3009 7.13997C19.4342 7.27327 19.4342 7.48939 19.3009 7.62269L18.2507 8.67289C19.1908 9.84991 19.7796 11.2685 19.9492 12.7653C20.1187 14.2622 19.8622 15.7765 19.2091 17.134C18.5561 18.4915 17.533 19.637 16.2576 20.4387C14.9822 21.2405 13.5064 21.6658 12 21.6658C10.4936 21.6658 9.01776 21.2405 7.74239 20.4387C6.46703 19.637 5.44394 18.4915 4.79087 17.134C4.1378 15.7765 3.88128 14.2622 4.05084 12.7653C4.22041 11.2685 4.80916 9.84991 5.74934 8.67289L4.69931 7.62358C4.56593 7.49029 4.56589 7.27411 4.69922 7.14078L5.47331 6.36669C5.60661 6.23339 5.82273 6.23339 5.95603 6.36669L7.00622 7.41689V7.416ZM12 19.8889C12.8171 19.8889 13.6262 19.7279 14.3811 19.4152C15.1361 19.1025 15.822 18.6442 16.3998 18.0664C16.9776 17.4886 17.4359 16.8027 17.7486 16.0478C18.0613 15.2929 18.2222 14.4838 18.2222 13.6667C18.2222 12.8495 18.0613 12.0404 17.7486 11.2855C17.4359 10.5306 16.9776 9.84467 16.3998 9.26689C15.822 8.6891 15.1361 8.23078 14.3811 7.91808C13.6262 7.60538 12.8171 7.44444 12 7.44444C10.3498 7.44444 8.76712 8.1 7.60023 9.26689C6.43333 10.4338 5.77778 12.0164 5.77778 13.6667C5.77778 15.3169 6.43333 16.8995 7.60023 18.0664C8.76712 19.2333 10.3498 19.8889 12 19.8889ZM8.44445 3.34133C8.44445 3.15282 8.59727 3 8.78578 3H15.2142C15.4027 3 15.5556 3.15282 15.5556 3.34133V4.43644C15.5556 4.62496 15.4027 4.77778 15.2142 4.77778H8.78578C8.59727 4.77778 8.44445 4.62496 8.44445 4.43644V3.34133Z"
+                  fill="#789194"
+                />
+                <path
+                  d="M15.5225 14.6743L13.2131 13.341L15.2154 9.87304L8.47525 12.6584L10.7847 13.9917L8.78466 17.4558L15.5225 14.6743Z"
+                  fill="#789194"
+                />
+              </svg>
+              Speed Optimiser</span
+            >
+            <input
+              type="radio"
+              id="optimiser-1"
+              name="optimiser[]"
+              value="-4.50"
+              class="data-optimiser calculator__data-text-option"
+            />
+          </label>
+        </div>
+
+        <div class="calculator__option-row">
+          <label for="optimiser-2">
+            <span
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="24" height="24" fill="none" />
+                <g clip-path="url(#clip0_3236_8728)">
+                  <path
+                    d="M20 20H4C2.89543 20 2 19.1046 2 18V6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20ZM4 6V18H20V6H4Z"
+                    fill="#789194"
+                  />
+                  <path
+                    d="M6.373 16.0004L5 14.6564L9.856 9.90036C10.2383 9.52884 10.8467 9.52884 11.229 9.90036L13.456 12.0814L16.8059 8.85433L18.3135 8.67236L18.1789 10.1983L14.144 14.1004C13.7617 14.4719 13.1533 14.4719 12.771 14.1004L10.543 11.9184L6.373 16.0004Z"
+                    fill="#789194"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_3236_8728">
+                    <rect width="24" height="24" fill="none" />
+                  </clipPath>
+                </defs>
+              </svg>
+              Video Optimiser</span
+            >
+            <input
+              type="radio"
+              id="optimiser-2"
+              name="optimiser[]"
+              value="-10.00"
+              class="data-optimiser calculator__data-text-option"
+            />
+          </label>
+        </div>
+
+        <div class="calculator__total-cards">
+          <div class="calculator__total-card">
+            <span class="caps">Your Calculation</span>
+            <div class="calculator__total-card__value">
+              <span id="total">0</span>
+            </div>
+            per month
           </div>
-          <i>(includes <b>$1.99</b> platform fee)</i>
+          <div class="calculator__total-card calculator__total-card--primary">
+            <span class="caps">Your Price</span>
+            <div class="calculator__total-card__value">
+              $<span id="total-price">0.00</span>
+            </div>
+            <i>(includes <b>$1.99</b> platform fee)</i>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-  <script src="main.js"></script>
-</body>
+    </form>
+    <script src="main.js"></script>
+  </body>
 </html>
