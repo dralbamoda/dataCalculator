@@ -1,5 +1,74 @@
+:root {
+  --tablet-landscape: 768px;
+  --spacing: 1em;
+}
+
+.container {
+  width: 100%;
+  background: #eee;
+  color: #333;
+  padding: calc(var(--spacing) * 2);
+  max-width: 1200px;
+}
+
+.page {
+  display: grid;
+  grid-template-areas:
+    "head"
+    "main"
+    "foot";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 100%;
+}
+
+.head {
+  grid-area: head;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  outline: 1px solid magenta;
+}
+.nav {
+  grid-area: main;
+  outline: 1px solid blue;
+}
+.foot {
+  grid-area: foot;
+  outline: 1px solid red;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
 form {
   width: 100%;
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 768px) {
+  .page {
+    display: grid;
+    grid-template-areas:
+      "head head"
+      "nav main";
+    grid-template-rows: 320px 1fr;
+    grid-template-columns: 50% 50%;
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .foot {
+    grid-area: main;
+  }
+
+  form {
+    width: 100%;
+    min-width: 600px;
+  }
 }
 
 .calculator {
@@ -8,9 +77,9 @@ form {
   --tertiary: #789194;
   --grey: #e9edea;
   --track: var(--grey);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -327,7 +396,6 @@ form {
   background-color: white;
   box-shadow: var(--box-fill);
   border-radius: var(--thumb-width, var(--thumb-height));
-
   filter: brightness(100%);
   clip-path: polygon(
     100% -1px,
