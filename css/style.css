@@ -10,7 +10,7 @@ body {
   --background: #fff;
   --track-color: var(--grey);
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: gilroyregular, sans-serif;
   background-color: var(--background);
   color: var(--darkfg);
 }
@@ -24,6 +24,20 @@ body {
 body {
   display: grid;
   place-items: center;
+}
+
+b {
+  font-family: gilroybold, sans-serif;
+}
+
+h1,
+h2,
+.hero__number {
+  font-family: gilroyextrabold, sans-serif;
+}
+
+label {
+  font-family: gilroysemibold, sans-serif;
 }
 
 .header__sticky {
