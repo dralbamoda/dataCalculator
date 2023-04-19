@@ -1,3 +1,8 @@
+:root {
+  --tablet-landscape: 768px;
+  --spacing: 1em;
+}
+
 html,
 body {
   --darkbg: #111;
@@ -8,12 +13,92 @@ body {
   --grey: #e9edea;
   --track: var(--grey);
   --background: #fff;
+  --forground: #333;
   --track-color: var(--grey);
   font-size: 16px;
   font-family: gilroyregular, sans-serif;
   background-color: var(--background);
-  color: var(--darkfg);
+  color: var(--forground);
 }
+
+.container {
+  width: 100%;
+  background: #fff;
+  padding: calc(var(--spacing) * 2);
+  max-width: 1200px;
+}
+
+.page {
+  display: grid;
+  gap: 2em;
+  grid-template-areas:
+    "head"
+    "main"
+    "foot";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 100%;
+}
+
+@media (min-width: 768px) {
+  .page {
+    display: grid;
+    grid-template-areas:
+      "nav head"
+      "nav main";
+    grid-template-rows: 380px 1fr;
+    grid-template-columns: 50% 50%;
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .foot {
+    grid-area: main;
+  }
+
+  form {
+    width: 100%;
+    min-width: 600px;
+  }
+}
+
+.header__sticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--background);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	html,
+	body {
+		--darkbg: #111;
+  	--darkfg: #eee;
+		--background: var(--darkbg);
+		--forground: var(--darkfg);
+		--track-color: var(--secondary);
+		color: var(--forground);
+	}
+
+	.container {
+		background: var(--background);
+	}
+
+	.calculator {
+		--grey: var(--secondary);
+		--secondary: var(--tertiary);
+		--track: var(--track-color);
+	}
+} */
 
 * {
   padding: 0;
@@ -38,31 +123,4 @@ h2,
 
 label {
   font-family: gilroysemibold, sans-serif;
-}
-
-.header__sticky {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background-color: var(--background);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* @media (prefers-color-scheme: dark) {
-	html,
-	body {
-		--background: var(--darkbg);
-		background-color: var(--background);
-	}
-
-	html::before {
-		background-color: var(--background);
-	}
-} */
-
-.caps {
-  text-transform: uppercase;
 }

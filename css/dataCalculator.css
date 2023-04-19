@@ -1,44 +1,14 @@
-:root {
-  --tablet-landscape: 768px;
-  --spacing: 1em;
-}
-
-body {
-  color: #333;
-}
-
-.container {
-  width: 100%;
-  background: #fff;
-  padding: calc(var(--spacing) * 2);
-  max-width: 1200px;
-}
-
-.page {
-  display: grid;
-  gap: 1em;
-  grid-template-areas:
-    "head"
-    "main"
-    "foot";
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 100%;
-}
-
 .head {
   grid-area: head;
   position: sticky;
   top: 0;
   z-index: 2;
-  outline: 1px solid magenta;
 }
 .nav {
   grid-area: main;
-  outline: 1px solid blue;
 }
 .foot {
   grid-area: foot;
-  outline: 1px solid red;
 }
 
 p {
@@ -208,7 +178,8 @@ form {
 .calculator .calculator__graph .hero__units {
   color: var(--primary);
   font-size: 1em;
-  font-weight: 900;
+  font-weight: normal;
+  font-family: gilroyextrabold;
   padding: 0.25em 0 0.5em;
 }
 
