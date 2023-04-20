@@ -1,0 +1,16 @@
+<div class="calculator__slider">
+  <label for="{{id}}">{{ name }}</label>
+  <input
+    type="range"
+    id="{{id}}"
+    name="{{name}}"
+    list="{{name}}-markers"
+    max="{{ options | last | split: ':' | first }}"
+    value="{{value}}"
+    class="data calculator__data" />
+  <datalist class="calculator__datalist" id="{{name}}-markers">
+    {% for option in options %}
+      <option value="{{option | split: ':' | first}}" label="{{option | split: ':' | last}}"></option>
+    {% endfor %}
+  </datalist>
+</div>
