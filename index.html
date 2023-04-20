@@ -33,140 +33,187 @@
         </section>
         <section class="page__section nav">
           <div class="calculator__sliders">
-            <div>
+            <div class="calculator__slider">
               <label for="web">Web Browsing</label>
               <input
                 type="range"
                 id="web"
-                name="web"
-                list="web-markers"
+                name="Web Browsing"
+                list="Web Browsing-markers"
                 max="500"
                 value="300"
                 class="data calculator__data"
               />
-              <datalist class="calculator__datalist" id="web-markers">
+              <datalist class="calculator__datalist" id="Web Browsing-markers">
                 <option value="0" label="0MB"></option>
+
                 <option value="100" label="100MB"></option>
+
                 <option value="200" label="200MB"></option>
+
                 <option value="300" label="300MB"></option>
+
                 <option value="400" label="400MB"></option>
+
                 <option value="500" label="500MB"></option>
               </datalist>
             </div>
-            <div>
+
+            <div class="calculator__slider">
               <label for="social">Social Networking</label>
               <input
                 type="range"
                 id="social"
-                name="social"
-                list="social-markers"
+                name="Social Networking"
+                list="Social Networking-markers"
                 max="500"
                 value="200"
                 class="data calculator__data"
               />
-              <datalist class="calculator__datalist" id="social-markers">
+              <datalist
+                class="calculator__datalist"
+                id="Social Networking-markers"
+              >
                 <option value="0" label="0MB"></option>
+
                 <option value="100" label="100MB"></option>
+
                 <option value="200" label="200MB"></option>
+
                 <option value="300" label="300MB"></option>
+
                 <option value="400" label="400MB"></option>
+
                 <option value="500" label="500MB"></option>
               </datalist>
             </div>
-            <div>
+
+            <div class="calculator__slider">
               <label for="emails">Emails</label>
               <input
                 type="range"
                 id="emails"
-                name="emails"
-                list="emails-markers"
+                name="Emails"
+                list="Emails-markers"
                 max="1250"
                 value="250"
                 class="data calculator__data"
               />
-              <datalist class="calculator__datalist" id="emails-markers">
+              <datalist class="calculator__datalist" id="Emails-markers">
                 <option value="0" label="0MB"></option>
+
                 <option value="250" label="250MB"></option>
+
                 <option value="500" label="500MB"></option>
+
                 <option value="750" label="750MB"></option>
+
                 <option value="1000" label="1GB"></option>
-                <option value="1250" label="1.25G"></option>
+
+                <option value="1250" label="1.25GB"></option>
               </datalist>
             </div>
-            <div>
+
+            <div class="calculator__slider">
               <label for="music">Music</label>
               <input
                 type="range"
                 id="music"
-                name="music"
-                list="music-markers"
+                name="Music"
+                list="Music-markers"
                 max="2500"
                 value="1000"
                 class="data calculator__data"
               />
-              <datalist class="calculator__datalist" id="music-markers">
+              <datalist class="calculator__datalist" id="Music-markers">
                 <option value="0" label="0MB"></option>
+
                 <option value="500" label="500MB"></option>
+
                 <option value="1000" label="1GB"></option>
-                <option value="1500" label="1.5G"></option>
+
+                <option value="1500" label="1.5GB"></option>
+
                 <option value="2000" label="2GB"></option>
+
                 <option value="2500" label="2.5GB"></option>
               </datalist>
             </div>
-            <div>
+
+            <div class="calculator__slider">
               <label for="video">Video</label>
               <input
                 type="range"
                 id="video"
-                name="video"
-                list="video-markers"
+                name="Video"
+                list="Video-markers"
                 max="30000"
                 value="5000"
                 class="data calculator__data"
               />
-              <datalist class="calculator__datalist" id="video-markers">
+              <datalist class="calculator__datalist" id="Video-markers">
                 <option value="0" label="0MB"></option>
+
                 <option value="1000" label="1GB"></option>
+
                 <option value="2000" label="2GB"></option>
+
                 <option value="5000" label="5GB"></option>
+
                 <option value="10000" label="10GB"></option>
+
                 <option value="30000" label="30GB"></option>
               </datalist>
             </div>
-            <div>
+
+            <div class="calculator__slider">
               <label for="tv">TV/movie streaming</label>
               <input
                 type="range"
                 id="tv"
-                name="tv"
-                list="tv-markers"
+                name="TV/movie streaming"
+                list="TV/movie streaming-markers"
                 max="200000"
                 value="100000"
                 class="data calculator__data"
               />
-              <datalist class="calculator__datalist" id="tv-markers">
+              <datalist
+                class="calculator__datalist"
+                id="TV/movie streaming-markers"
+              >
                 <option value="0" label="0MB"></option>
+
                 <option value="10000" label="10GB"></option>
+
                 <option value="20000" label="20GB"></option>
+
                 <option value="50000" label="50GB"></option>
+
                 <option value="100000" label="100GB"></option>
+
                 <option value="200000" label="200GB"></option>
               </datalist>
             </div>
-            <div>
+
+            <div class="calculator__slider">
               <label for="apps">Apps and gaming</label>
               <input
                 type="range"
                 id="apps"
-                name="apps"
-                list="apps-markers"
+                name="Apps and gaming"
+                list="Apps and gaming-markers"
                 max="5000"
-                value="500"
+                value="2500"
                 class="data calculator__data"
               />
-              <datalist class="calculator__datalist" id="apps-markers">
+              <datalist
+                class="calculator__datalist"
+                id="Apps and gaming-markers"
+              >
                 <option value="0" label="0MB"></option>
+
                 <option value="2500" label="2.5GB"></option>
+
                 <option value="5000" label="5GB"></option>
               </datalist>
             </div>
@@ -182,7 +229,8 @@
                   class="data-text calculator__data-text-option"
                   checked
                 />
-                Unlimited: <b>$4.50</b>
+                Unlimited:
+                <b>$4.50</b>
               </label>
               <label for="talk-2">
                 <input
@@ -192,7 +240,8 @@
                   value="2.50"
                   class="data-text calculator__data-text-option"
                 />
-                150: <b>$2.50</b>
+                150:
+                <b>$2.50</b>
               </label>
               <label for="talk-3">
                 <input
@@ -202,7 +251,8 @@
                   value="1.50"
                   class="data-text calculator__data-text-option"
                 />
-                50: <b>$1.50</b>
+                50:
+                <b>$1.50</b>
               </label>
               <label for="talk-4">
                 <input
@@ -212,19 +262,17 @@
                   value="0"
                   class="data-text calculator__data-text-option"
                 />
-                None: <b>$0</b>
+                None:
+                <b>$0</b>
               </label>
             </div>
           </div>
         </section>
-        <section class="page__section phone">
-          <p>Test</p>
-        </section>
         <section class="page__section foot">
           <div class="calculator__option-row">
             <label for="optimiser-2">
-              <span
-                ><svg
+              <span>
+                <svg
                   width="32"
                   height="32"
                   viewBox="0 0 24 24"
@@ -251,7 +299,7 @@
                 Video Optimiser</span
               >
               <input
-                type="radio"
+                type="checkbox"
                 id="optimiser-2"
                 name="optimiser[]"
                 value="-10.00"
@@ -259,9 +307,12 @@
               />
             </label>
             <p class="calculator__help-text background--tertiary">
-              MobileX’s <b>Video</b> and <b>Speed Optimizers</b> will teach you
-              the most efficient ways to adjust your device’s settings for data
-              use.
+              MobileX’s
+              <b>Video</b>
+              and
+              <b>Speed Optimizers</b>
+              will teach you the most efficient ways to adjust your device’s
+              settings for data use.
             </p>
             <p class="calculator__help-text">
               Ok so here’s your mobile data prediction, based on the estimates
@@ -282,7 +333,11 @@
               <div class="calculator__total-card__value">
                 $<span id="total-price">0.00</span>
               </div>
-              <i>(includes <b>$1.99</b> platform fee)</i>
+              <i
+                >(includes
+                <b>$1.99</b>
+                platform fee)</i
+              >
             </div>
           </div>
         </section>
