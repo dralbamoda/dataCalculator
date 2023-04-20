@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run serve",
     "build": "liquidjs --context @./data.json --template @./index.liquid > index.html && npm run lint",
-    "lint": "prettier --write index.html",
+    "lint": "prettier --write .",
     "serve": "live-server & nodemon --watch . --ext .liquid --exec 'echo \"reloading...\" && npm run build'"
   },
   "repository": {

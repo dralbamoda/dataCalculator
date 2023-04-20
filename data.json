@@ -3,210 +3,217 @@
     "sliders": [
       {
         "id": "web",
-        "name": "Web Browsing",
-        "value": 300,
+        "name": "Browsing",
+        "value": 0,
+        "helpText": "Number of sites/pages you visit",
+        "scale": 1,
+        "calculation": 1.5,
+        "calculationUnit": "page",
+        "calculationExplanation": "1.5MB per page",
         "options": [
           {
             "value": 0,
-            "label": "0MB"
+            "label": "0"
           },
           {
-            "value": 100,
-            "label": "100MB"
+            "value": 225,
+            "label": "150"
           },
           {
-            "value": 200,
-            "label": "200MB"
+            "value": 1125,
+            "label": "750"
           },
           {
-            "value": 300,
-            "label": "300MB"
+            "value": 2250,
+            "label": "1500"
           },
           {
-            "value": 400,
-            "label": "400MB"
+            "value": 4500,
+            "label": "3000"
           },
           {
-            "value": 500,
-            "label": "500MB"
-          }
-        ]
-      },
-      {
-        "id": "social",
-        "name": "Social Netowrking",
-        "value": 200,
-        "options": [
-          {
-            "value": 0,
-            "label": "0MB"
-          },
-          {
-            "value": 100,
-            "label": "100MB"
-          },
-          {
-            "value": 200,
-            "label": "200MB"
-          },
-          {
-            "value": 300,
-            "label": "300MB"
-          },
-          {
-            "value": 400,
-            "label": "400MB"
-          },
-          {
-            "value": 500,
-            "label": "500MB"
-          }
-        ]
-      },
-      {
-        "id": "emails",
-        "name": "Emails",
-        "value": 250,
-        "options": [
-          {
-            "value": 0,
-            "label": "0MB"
-          },
-          {
-            "value": 250,
-            "label": "250MB"
-          },
-          {
-            "value": 500,
-            "label": "500MB"
-          },
-          {
-            "value": 750,
-            "label": "750MB"
-          },
-          {
-            "value": 1000,
-            "label": "1GB"
-          },
-          {
-            "value": 1250,
-            "label": "1.25GB"
-          }
-        ]
-      },
-      {
-        "id": "music",
-        "name": "Music",
-        "value": 1000,
-        "options": [
-          {
-            "value": 0,
-            "label": "0MB"
-          },
-          {
-            "value": 500,
-            "label": "500MB"
-          },
-          {
-            "value": 1000,
-            "label": "1GB"
-          },
-          {
-            "value": 1500,
-            "label": "1.5GB"
-          },
-          {
-            "value": 2000,
-            "label": "2GB"
-          },
-          {
-            "value": 2500,
-            "label": "2.5GB"
+            "value": 11250,
+            "label": "7500+"
           }
         ]
       },
       {
         "id": "video",
-        "name": "Video",
-        "value": 5000,
+        "name": "Video streaming",
+        "value": 0,
+        "helpText": "Time streaming video (YouTube, TikTok, Facebook, etc)",
+        "scale": 1,
+        "calculation": 9.5,
+        "calculationUnit": "minute",
+        "calculationExplanation": "9.5MB per minute",
         "options": [
           {
             "value": 0,
             "label": "0MB"
           },
           {
-            "value": 1000,
-            "label": "1GB"
+            "value": 95,
+            "label": "10 mins"
           },
           {
-            "value": 2000,
-            "label": "2GB"
+            "value": 285,
+            "label": "30 mins"
           },
           {
-            "value": 5000,
-            "label": "5GB"
+            "value": 570,
+            "label": "1hr"
           },
           {
-            "value": 10000,
-            "label": "10GB"
+            "value": 1140,
+            "label": "2hrs"
           },
           {
-            "value": 30000,
-            "label": "30GB"
+            "value": 2280,
+            "label": "4hrs+"
           }
         ]
       },
       {
-        "id": "tv",
-        "name": "TV/movie streaming",
-        "value": 10000,
+        "id": "downloads",
+        "name": "Movie downloads",
+        "value": 0,
+        "helpText": "Amount of HD movies downloaded (iTunes, Google Play, etc)",
+        "scale": 1,
+        "calculation": 42.66,
+        "calculationUnit": "minute",
+        "calculationExplanation": "3.75GB/movie / 90min = 42.66MB per min",
         "options": [
           {
             "value": 0,
             "label": "0MB"
           },
           {
-            "value": 10000,
-            "label": "10GB"
+            "value": 426.66,
+            "label": "10 mins"
           },
           {
-            "value": 20000,
-            "label": "20GB"
+            "value": 1280,
+            "label": "30 mins"
           },
           {
-            "value": 50000,
-            "label": "50GB"
+            "value": 2560,
+            "label": "1hr"
           },
           {
-            "value": 100000,
-            "label": "100GB"
+            "value": 5120,
+            "label": "2hrs"
           },
           {
-            "value": 200000,
-            "label": "200GB"
+            "value": 10240,
+            "label": "4hrs+"
+          }
+        ]
+      },
+      {
+        "id": "music",
+        "name": "Music streaming",
+        "value": 0,
+        "helpText": "Time streaming music services (Spotify, Pandora, etc)",
+        "scale": 1,
+        "calculation": 2.5,
+        "calculationUnit": "minute",
+        "calculationExplanation": "2.5MB per min",
+        "options": [
+          {
+            "value": 0,
+            "label": "0 mins"
+          },
+          {
+            "value": 25,
+            "label": "10 mins"
+          },
+          {
+            "value": 75,
+            "label": "30 mins"
+          },
+          {
+            "value": 150,
+            "label": "1hr"
+          },
+          {
+            "value": 300,
+            "label": "2hrs"
+          },
+          {
+            "value": 600,
+            "label": "4hrs+"
           }
         ]
       },
       {
         "id": "apps",
-        "name": "Apps and gaming",
-        "value": 2500,
+        "name": "Apps and games",
+        "value": 0,
+        "helpText": "Number of apps/games you’d download and use regularly",
+        "scale": 1,
+        "calculation": 35,
+        "calculationUnit": "item",
+        "calculationExplanation": "35MB per item",
         "options": [
           {
             "value": 0,
-            "label": "0MB"
+            "label": "0"
           },
           {
-            "value": 1000,
-            "label": "1GB"
+            "value": 700,
+            "label": "20"
           },
           {
-            "value": 2000,
-            "label": "2GB"
+            "value": 1050,
+            "label": "30"
           },
           {
-            "value": 5000,
-            "label": "5GB"
+            "value": 1575,
+            "label": "45"
+          },
+          {
+            "value": 1750,
+            "label": "50"
+          },
+          {
+            "value": 2100,
+            "label": "60+"
+          }
+        ]
+      },
+      {
+        "id": "productivity",
+        "name": "Productivity",
+        "value": 0,
+        "helpText": "Number of emails you might send/receive",
+        "scale": 1,
+        "calculation": 0.5,
+        "calculationUnit": "item",
+        "calculationExplanation": "0.5MB per item",
+        "options": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 2.5,
+            "label": "5"
+          },
+          {
+            "value": 12.5,
+            "label": "25"
+          },
+          {
+            "value": 25,
+            "label": "50"
+          },
+          {
+            "value": 50,
+            "label": "100"
+          },
+          {
+            "value": 125,
+            "label": "250+"
           }
         ]
       }

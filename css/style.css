@@ -41,7 +41,6 @@ body {
 
 @media (min-width: 768px) {
   .page {
-    display: grid;
     grid-template-areas:
       "nav head"
       "nav main";

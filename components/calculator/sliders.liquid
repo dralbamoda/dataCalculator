@@ -1,9 +1,7 @@
 <div class="calculator__sliders">
-  <ul>
-    {% for slider in calculator.sliders %}
-      {% include './slider.liquid', slider: slider %}
-    {% endfor %}
-  </ul>
+  {% for slider in calculator.sliders %}
+    {% include './slider.liquid', slider: slider %}
+  {% endfor %}
 
   <div class="calculator__section-label">Talk/Text</div>
   <div class="calculator__options">

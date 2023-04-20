@@ -199,14 +199,53 @@ form {
   padding: 1em 0;
 }
 
-.calculator .calculator__sliders label {
-  display: block;
+.calculator .calculator__sliders .calculator__slider-label {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 0.25em;
   font-size: 1.25em;
   line-height: 1.5;
   font-weight: 500;
   color: var(--tertiary);
   z-index: 1;
+}
+
+.calculator .calculator__sliders .calculator__slider-period {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 0.5em;
+  font-weight: 100;
+  color: var(--tertiary);
+}
+
+.calculator .calculator__sliders .calculator__radio-label {
+  text-transform: uppercase;
+}
+
+.calculator .calculator__sliders .calculator__radio {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 1em;
+  margin: 0 0.25em 0 0.5em;
+}
+
+.calculator .calculator__sliders .calculator__radio::after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--grey);
+  transition: 0.25s background-color ease;
+}
+
+.calculator .calculator__sliders .calculator__radio:checked::after {
+  background-color: var(--primary);
+}
+
+.calculator .calculator__sliders .calculator__slider-label-help {
+  color: var(--tertiary);
 }
 
 .calculator .calculator__datalist {
@@ -307,7 +346,6 @@ form {
   font-weight: 500;
   color: var(--tertiary);
   padding: 1.5em 0 0.5em;
-  border-top: 2px solid var(--grey);
 }
 
 .calculator .calculator__option-row label {

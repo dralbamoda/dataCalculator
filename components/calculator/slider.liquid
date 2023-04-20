@@ -1,15 +1,30 @@
 {% assign max = slider.options | last %}
 <div class="calculator__slider">
-  <label for="{{slider.id}}">{{ slider.name }}</label>
+  <label class="calculator__slider-label" for="{{slider.id}}">{{ slider.name }}
+    <div class="calculator__slider-period">
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-{{slider.id}}[]"
+          value="30"> per day</label>
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-{{slider.id}}[]"
+          checked
+          value="1"> per month</label>
+    </div>
+  </label>
+  <p class="calculator__slider-label-help">{{ slider.helpText }}</p>
   <input
     type="range"
     id="{{slider.id}}"
     name="{{slider.name}}"
-    list="{{slider.name}}-markers"
+    list="{{slider.id}}-markers"
     max="{{ max.value }}"
     value="{{slider.value}}"
     class="data calculator__data" />
-  <datalist class="calculator__datalist" id="{{name}}-markers">
+  <datalist class="calculator__datalist" id="{{slider.id}}-markers">
     {% for option in slider.options %}
       <option value="{{option.value}}" label="{{option.label}}"></option>
     {% endfor %}
