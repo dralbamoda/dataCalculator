@@ -2,7 +2,7 @@ let currentValues = {
   web: 300,
   social: 200,
   emails: 250,
-  music: 1000,
+  music: 500,
   video: 5000,
   tv: 100000,
   apps: 500,

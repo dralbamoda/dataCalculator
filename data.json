@@ -1,0 +1,215 @@
+{
+  "calculator": {
+    "sliders": [
+      {
+        "id": "web",
+        "name": "Web Browsing",
+        "value": 300,
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 100,
+            "label": "100MB"
+          },
+          {
+            "value": 200,
+            "label": "200MB"
+          },
+          {
+            "value": 300,
+            "label": "300MB"
+          },
+          {
+            "value": 400,
+            "label": "400MB"
+          },
+          {
+            "value": 500,
+            "label": "500MB"
+          }
+        ]
+      },
+      {
+        "id": "social",
+        "name": "Social Netowrking",
+        "value": 200,
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 100,
+            "label": "100MB"
+          },
+          {
+            "value": 200,
+            "label": "200MB"
+          },
+          {
+            "value": 300,
+            "label": "300MB"
+          },
+          {
+            "value": 400,
+            "label": "400MB"
+          },
+          {
+            "value": 500,
+            "label": "500MB"
+          }
+        ]
+      },
+      {
+        "id": "emails",
+        "name": "Emails",
+        "value": 250,
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 250,
+            "label": "250MB"
+          },
+          {
+            "value": 500,
+            "label": "500MB"
+          },
+          {
+            "value": 750,
+            "label": "750MB"
+          },
+          {
+            "value": 1000,
+            "label": "1GB"
+          },
+          {
+            "value": 1250,
+            "label": "1.25GB"
+          }
+        ]
+      },
+      {
+        "id": "music",
+        "name": "Music",
+        "value": 1000,
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 500,
+            "label": "500MB"
+          },
+          {
+            "value": 1000,
+            "label": "1GB"
+          },
+          {
+            "value": 1500,
+            "label": "1.5GB"
+          },
+          {
+            "value": 2000,
+            "label": "2GB"
+          },
+          {
+            "value": 2500,
+            "label": "2.5GB"
+          }
+        ]
+      },
+      {
+        "id": "video",
+        "name": "Video",
+        "value": 5000,
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 1000,
+            "label": "1GB"
+          },
+          {
+            "value": 2000,
+            "label": "2GB"
+          },
+          {
+            "value": 5000,
+            "label": "5GB"
+          },
+          {
+            "value": 10000,
+            "label": "10GB"
+          },
+          {
+            "value": 30000,
+            "label": "30GB"
+          }
+        ]
+      },
+      {
+        "id": "tv",
+        "name": "TV/movie streaming",
+        "value": 10000,
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 10000,
+            "label": "10GB"
+          },
+          {
+            "value": 20000,
+            "label": "20GB"
+          },
+          {
+            "value": 50000,
+            "label": "50GB"
+          },
+          {
+            "value": 100000,
+            "label": "100GB"
+          },
+          {
+            "value": 200000,
+            "label": "200GB"
+          }
+        ]
+      },
+      {
+        "id": "apps",
+        "name": "Apps and gaming",
+        "value": 2500,
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 1000,
+            "label": "1GB"
+          },
+          {
+            "value": 2000,
+            "label": "2GB"
+          },
+          {
+            "value": 5000,
+            "label": "5GB"
+          }
+        ]
+      }
+    ]
+  }
+}
