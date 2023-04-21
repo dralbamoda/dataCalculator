@@ -2,7 +2,7 @@
   grid-area: head;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 4;
 }
 .nav {
   grid-area: main;
@@ -19,11 +19,6 @@ form {
   width: 100%;
   margin: auto;
   margin-bottom: 2em;
-}
-
-.calculator__help-text {
-  padding: 16px;
-  border-radius: 7px 7px 0px 0px;
 }
 
 .background--primary {
@@ -290,6 +285,7 @@ form {
   border-radius: 0.5em;
   z-index: 1;
   font-size: 0.75em;
+  color: var(--grey);
 }
 
 .calculator .calculator__total-card--primary {
@@ -327,6 +323,7 @@ form {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: var(--tertiary);
 }
 
 .calculator .calculator__options label {
@@ -349,12 +346,16 @@ form {
 }
 
 .calculator .calculator__option-row label {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 1.5em 0 0.5em;
   border-top: 2px solid var(--grey);
+  z-index: 3;
+  background: var(--background);
+  height: 80px;
 }
 
 .calculator .calculator__option-row label span {
@@ -370,6 +371,25 @@ form {
 .calculator .calculator__option-row svg {
   width: 2em;
   height: 2em;
+}
+
+.calculator__help-text-panel {
+  position: relative;
+  z-index: 1;
+  transform: translateY(0%);
+  transition: transform 0.3s ease;
+  height: 80px;
+}
+
+.calculator__help-text-panel.closed {
+  transform: translateY(-100%);
+}
+
+.calculator__help-text {
+  position: relative;
+  z-index: 2;
+  padding: 1em;
+  border-radius: 0px 0px 0.5em 0.5em;
 }
 
 .calculator input[type="range"] {

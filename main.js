@@ -123,7 +123,14 @@ fetch("./data.json")
     values.forEach((v) => v.addEventListener("input", setRanges));
     periods.forEach((v) => v.addEventListener("change", setPeriod));
     textValues.forEach((v) => v.addEventListener("click", setValue));
-    optimiserValues.forEach((v) => v.addEventListener("click", setValue));
+    optimiserValues.forEach((v) =>
+      v.addEventListener("click", (e) => {
+        setValue(e);
+        document
+          .querySelector(".calculator__help-text-panel")
+          .classList.toggle("closed");
+      })
+    );
 
     // because safari
     mockDataLists();
