@@ -1,5 +1,4 @@
 :root {
-  --tablet-landscape: 768px;
   --spacing: 1em;
 }
 
@@ -39,27 +38,8 @@ body {
   grid-template-columns: 100%;
 }
 
-@media (min-width: 768px) {
-  .page {
-    grid-template-areas:
-      "nav head"
-      "nav main";
-    grid-template-rows: 380px 1fr;
-    grid-template-columns: 50% 50%;
-  }
-
-  .nav {
-    grid-area: nav;
-  }
-
-  .foot {
-    grid-area: main;
-  }
-
-  form {
-    width: 100%;
-    min-width: 600px;
-  }
+form {
+  width: 100%;
 }
 
 .header__sticky {

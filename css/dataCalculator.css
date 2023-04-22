@@ -33,14 +33,14 @@ form {
   background-color: var(--tertiary-light);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .page {
     display: grid;
     grid-template-areas:
       "nav head"
       "nav main";
     grid-template-rows: 380px 1fr;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50%;
   }
 
   .nav {
@@ -53,7 +53,6 @@ form {
 
   form {
     width: 100%;
-    min-width: 600px;
   }
 }
 
