@@ -63,9 +63,6 @@ form {
   --tertiary-light: #f1f6f4;
   --grey: #e9edea;
   --track: var(--grey);
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
 }
 
 /* @media (prefers-color-scheme: dark) {
