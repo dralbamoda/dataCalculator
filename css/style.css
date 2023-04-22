@@ -23,23 +23,14 @@ body {
 .container {
   width: 100%;
   background: #fff;
-  padding: calc(var(--spacing) * 2);
+  padding: var(--spacing);
   max-width: 1200px;
 }
 
-.page {
-  display: grid;
-  gap: 2em;
-  grid-template-areas:
-    "head"
-    "main"
-    "foot";
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 100%;
-}
-
-form {
-  width: 100%;
+@media (min-width: 480px) {
+  .container {
+    padding: calc(var(--spacing) * 2);
+  }
 }
 
 .header__sticky {

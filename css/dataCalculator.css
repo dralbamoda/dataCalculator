@@ -1,3 +1,19 @@
+.page {
+  position: relative;
+  display: grid;
+  gap: 2em;
+  grid-template-areas:
+    "head"
+    "main"
+    "foot";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 100%;
+}
+
+form {
+  width: 100%;
+}
+
 .head {
   grid-area: head;
   position: sticky;
@@ -33,22 +49,43 @@ form {
   background-color: var(--tertiary-light);
 }
 
+.phone {
+  display: none;
+}
+
 @media (min-width: 900px) {
   .page {
     display: grid;
     grid-template-areas:
-      "nav head"
-      "nav main";
+      "main head"
+      "main foot";
     grid-template-rows: 380px 1fr;
     grid-template-columns: 50%;
   }
 
   .nav {
-    grid-area: nav;
+    grid-area: main;
   }
 
   .foot {
-    grid-area: main;
+    grid-area: foot;
+    padding: 4em;
+  }
+
+  .phone {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(50% - 2em);
+    height: 100%;
+    background: transparent;
+    z-index: 4;
+    background-image: url(../images/device.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-position: center;
   }
 
   form {
@@ -319,6 +356,7 @@ form {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   color: var(--tertiary);
 }
 
