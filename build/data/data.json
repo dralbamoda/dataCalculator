@@ -1,0 +1,222 @@
+{
+  "calculator": {
+    "sliders": [
+      {
+        "id": "web",
+        "name": "Browsing",
+        "value": 0,
+        "helpText": "Number of sites/pages you visit",
+        "scale": 1,
+        "calculation": 1.5,
+        "calculationUnit": "page",
+        "calculationExplanation": "1.5MB per page",
+        "options": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 75,
+            "label": "50"
+          },
+          {
+            "value": 150,
+            "label": "100"
+          },
+          {
+            "value": 225,
+            "label": "150"
+          },
+          {
+            "value": 300,
+            "label": "200"
+          },
+          {
+            "value": 375,
+            "label": "250+"
+          }
+        ]
+      },
+      {
+        "id": "video",
+        "name": "Video streaming",
+        "value": 0,
+        "helpText": "Time streaming video (YouTube, TikTok, Facebook, etc)",
+        "scale": 1,
+        "calculation": 9.5,
+        "calculationUnit": "minute",
+        "calculationExplanation": "9.5MB per minute",
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 95,
+            "label": "10 mins"
+          },
+          {
+            "value": 285,
+            "label": "30 mins"
+          },
+          {
+            "value": 570,
+            "label": "1hr"
+          },
+          {
+            "value": 1140,
+            "label": "2hrs"
+          },
+          {
+            "value": 2280,
+            "label": "4hrs+"
+          }
+        ]
+      },
+      {
+        "id": "downloads",
+        "name": "Movie downloads",
+        "value": 0,
+        "helpText": "Amount of HD movies downloaded (iTunes, Google Play, etc)",
+        "scale": 1,
+        "calculation": 42.66,
+        "calculationUnit": "minute",
+        "calculationExplanation": "3.75GB/movie / 90min = 42.66MB per min",
+        "options": [
+          {
+            "value": 0,
+            "label": "0MB"
+          },
+          {
+            "value": 426.66,
+            "label": "10 mins"
+          },
+          {
+            "value": 1280,
+            "label": "30 mins"
+          },
+          {
+            "value": 2560,
+            "label": "1hr"
+          },
+          {
+            "value": 5120,
+            "label": "2hrs"
+          },
+          {
+            "label": "4hrs+",
+            "value": 10240
+          }
+        ]
+      },
+      {
+        "id": "music",
+        "name": "Music streaming",
+        "value": 0,
+        "helpText": "Time streaming music services (Spotify, Pandora, etc)",
+        "scale": 1,
+        "calculation": 2.5,
+        "calculationUnit": "minute",
+        "calculationExplanation": "2.5MB per min",
+        "options": [
+          {
+            "value": 0,
+            "label": "0 mins"
+          },
+          {
+            "value": 25,
+            "label": "10 mins"
+          },
+          {
+            "value": 75,
+            "label": "30 mins"
+          },
+          {
+            "value": 150,
+            "label": "1hr"
+          },
+          {
+            "value": 300,
+            "label": "2hrs"
+          },
+          {
+            "value": 600,
+            "label": "4hrs+"
+          }
+        ]
+      },
+      {
+        "id": "apps",
+        "name": "Apps and games",
+        "value": 0,
+        "helpText": "Number of apps/games you’d download and use regularly",
+        "scale": 1,
+        "calculation": 35,
+        "calculationUnit": "item",
+        "calculationExplanation": "35MB per item",
+        "options": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 700,
+            "label": "20"
+          },
+          {
+            "value": 1050,
+            "label": "30"
+          },
+          {
+            "value": 1575,
+            "label": "45"
+          },
+          {
+            "value": 1750,
+            "label": "50"
+          },
+          {
+            "value": 2100,
+            "label": "60+"
+          }
+        ]
+      },
+      {
+        "id": "productivity",
+        "name": "Productivity",
+        "value": 0,
+        "helpText": "Number of emails you might send/receive",
+        "scale": 1,
+        "calculation": 0.5,
+        "calculationUnit": "item",
+        "calculationExplanation": "0.5MB per item",
+        "options": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 2.5,
+            "label": "5"
+          },
+          {
+            "value": 12.5,
+            "label": "25"
+          },
+          {
+            "value": 25,
+            "label": "50"
+          },
+          {
+            "value": 50,
+            "label": "100"
+          },
+          {
+            "value": 125,
+            "label": "250+"
+          }
+        ]
+      }
+    ]
+  }
+}

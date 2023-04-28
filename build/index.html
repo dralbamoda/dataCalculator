@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Calculator</title>
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dataCalculator.css" />
+  </head>
+
+  <body>
+    
+    <main class="container">
+      <h1>“If I don’t know how much data I need, how can you?”</h1>
+<p>
+  <b>Great question!</b>
+  Our AI-guided mobile data forecast takes about 10
+  days to accurately predict your usage, but you can check out this handy
+    data calculator to get an idea of how much you might be using each
+    month.</p>
+      <form class="calculator page">
+  <section class="page__section head">
+    <div class="header__sticky">
+  <div class="calculator__graph">
+    <div class="hero">
+      <div id="hero" class="hero__number">00.00</div>
+      <div class="hero__units caps">Gigabytes</div>
+      <div class="hero__period caps">Over 30 Days</div>
+    </div>
+  </div>
+</div>
+  </section>
+  <section class="page__section nav">
+    <div class="calculator__sliders">
+  
+    
+<div class="calculator__slider">
+  <label class="calculator__slider-label" for="web">Browsing
+    <div class="calculator__slider-period">
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-web[]"
+          value="30"> per day</label>
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-web[]"
+          checked
+          value="1"> per month</label>
+    </div>
+  </label>
+  <p class="calculator__slider-label-help">Number of sites/pages you visit</p>
+  <input
+    type="range"
+    id="web"
+    name="Browsing"
+    list="web-markers"
+    max="375"
+    value="0"
+    class="data calculator__data" />
+  <datalist class="calculator__datalist" id="web-markers">
+    
+      <option value="0" label="0"></option>
+    
+      <option value="75" label="50"></option>
+    
+      <option value="150" label="100"></option>
+    
+      <option value="225" label="150"></option>
+    
+      <option value="300" label="200"></option>
+    
+      <option value="375" label="250+"></option>
+    
+  </datalist>
+</div>
+  
+    
+<div class="calculator__slider">
+  <label class="calculator__slider-label" for="video">Video streaming
+    <div class="calculator__slider-period">
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-video[]"
+          value="30"> per day</label>
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-video[]"
+          checked
+          value="1"> per month</label>
+    </div>
+  </label>
+  <p class="calculator__slider-label-help">Time streaming video (YouTube, TikTok, Facebook, etc)</p>
+  <input
+    type="range"
+    id="video"
+    name="Video streaming"
+    list="video-markers"
+    max="2280"
+    value="0"
+    class="data calculator__data" />
+  <datalist class="calculator__datalist" id="video-markers">
+    
+      <option value="0" label="0MB"></option>
+    
+      <option value="95" label="10 mins"></option>
+    
+      <option value="285" label="30 mins"></option>
+    
+      <option value="570" label="1hr"></option>
+    
+      <option value="1140" label="2hrs"></option>
+    
+      <option value="2280" label="4hrs+"></option>
+    
+  </datalist>
+</div>
+  
+    
+<div class="calculator__slider">
+  <label class="calculator__slider-label" for="downloads">Movie downloads
+    <div class="calculator__slider-period">
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-downloads[]"
+          value="30"> per day</label>
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-downloads[]"
+          checked
+          value="1"> per month</label>
+    </div>
+  </label>
+  <p class="calculator__slider-label-help">Amount of HD movies downloaded (iTunes, Google Play, etc)</p>
+  <input
+    type="range"
+    id="downloads"
+    name="Movie downloads"
+    list="downloads-markers"
+    max="10240"
+    value="0"
+    class="data calculator__data" />
+  <datalist class="calculator__datalist" id="downloads-markers">
+    
+      <option value="0" label="0MB"></option>
+    
+      <option value="426.66" label="10 mins"></option>
+    
+      <option value="1280" label="30 mins"></option>
+    
+      <option value="2560" label="1hr"></option>
+    
+      <option value="5120" label="2hrs"></option>
+    
+      <option value="10240" label="4hrs+"></option>
+    
+  </datalist>
+</div>
+  
+    
+<div class="calculator__slider">
+  <label class="calculator__slider-label" for="music">Music streaming
+    <div class="calculator__slider-period">
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-music[]"
+          value="30"> per day</label>
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-music[]"
+          checked
+          value="1"> per month</label>
+    </div>
+  </label>
+  <p class="calculator__slider-label-help">Time streaming music services (Spotify, Pandora, etc)</p>
+  <input
+    type="range"
+    id="music"
+    name="Music streaming"
+    list="music-markers"
+    max="600"
+    value="0"
+    class="data calculator__data" />
+  <datalist class="calculator__datalist" id="music-markers">
+    
+      <option value="0" label="0 mins"></option>
+    
+      <option value="25" label="10 mins"></option>
+    
+      <option value="75" label="30 mins"></option>
+    
+      <option value="150" label="1hr"></option>
+    
+      <option value="300" label="2hrs"></option>
+    
+      <option value="600" label="4hrs+"></option>
+    
+  </datalist>
+</div>
+  
+    
+<div class="calculator__slider">
+  <label class="calculator__slider-label" for="apps">Apps and games
+    <div class="calculator__slider-period">
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-apps[]"
+          value="30"> per day</label>
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-apps[]"
+          checked
+          value="1"> per month</label>
+    </div>
+  </label>
+  <p class="calculator__slider-label-help">Number of apps/games you’d download and use regularly</p>
+  <input
+    type="range"
+    id="apps"
+    name="Apps and games"
+    list="apps-markers"
+    max="2100"
+    value="0"
+    class="data calculator__data" />
+  <datalist class="calculator__datalist" id="apps-markers">
+    
+      <option value="0" label="0"></option>
+    
+      <option value="700" label="20"></option>
+    
+      <option value="1050" label="30"></option>
+    
+      <option value="1575" label="45"></option>
+    
+      <option value="1750" label="50"></option>
+    
+      <option value="2100" label="60+"></option>
+    
+  </datalist>
+</div>
+  
+    
+<div class="calculator__slider">
+  <label class="calculator__slider-label" for="productivity">Productivity
+    <div class="calculator__slider-period">
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-productivity[]"
+          value="30"> per day</label>
+      <label class="calculator__radio-label"><input
+          class="calculator__radio period"
+          type="radio"
+          name="unit-productivity[]"
+          checked
+          value="1"> per month</label>
+    </div>
+  </label>
+  <p class="calculator__slider-label-help">Number of emails you might send/receive</p>
+  <input
+    type="range"
+    id="productivity"
+    name="Productivity"
+    list="productivity-markers"
+    max="125"
+    value="0"
+    class="data calculator__data" />
+  <datalist class="calculator__datalist" id="productivity-markers">
+    
+      <option value="0" label="0"></option>
+    
+      <option value="2.5" label="5"></option>
+    
+      <option value="12.5" label="25"></option>
+    
+      <option value="25" label="50"></option>
+    
+      <option value="50" label="100"></option>
+    
+      <option value="125" label="250+"></option>
+    
+  </datalist>
+</div>
+  
+
+  <div class="calculator__section-label">Talk/Text</div>
+  <div class="calculator__options">
+    <label for="talk-1">
+      <input
+        type="radio"
+        id="talk-1"
+        name="talk[]"
+        value="4.50"
+        class="data-text calculator__data-text-option"
+        checked />
+      Unlimited:
+      <b>$4.50</b>
+    </label>
+    <label for="talk-2">
+      <input
+        type="radio"
+        id="talk-2"
+        name="talk[]"
+        value="2.50"
+        class="data-text calculator__data-text-option" />
+      150:
+      <b>$2.50</b>
+    </label>
+    <label for="talk-3">
+      <input
+        type="radio"
+        id="talk-3"
+        name="talk[]"
+        value="1.50"
+        class="data-text calculator__data-text-option" />
+      50:
+      <b>$1.50</b>
+    </label>
+    <label for="talk-4">
+      <input
+        type="radio"
+        id="talk-4"
+        name="talk[]"
+        value="0"
+        class="data-text calculator__data-text-option" />
+      None:
+      <b>$0</b>
+    </label>
+  </div>
+</div>
+  </section>
+  <section class="page__section foot">
+    <div class="calculator__option-row">
+  <label for="optimiser-2">
+    <span>
+      <svg
+        width="20"
+        height="22"
+        viewBox="0 0 20 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.17535 5.26154C5.82817 3.93727 7.88371 3.21721 10.0016 3.22059C12.2054 3.22059 14.2308 3.98387 15.8279 5.26154L17.0531 4.03627C17.2087 3.88075 17.4608 3.88075 17.6163 4.03627L18.5196 4.9395C18.6751 5.09502 18.6751 5.34717 18.5196 5.50269L17.2943 6.72796C18.3912 8.1012 19.0781 9.75624 19.2759 11.5026C19.4738 13.249 19.1745 15.0158 18.4125 16.5996C17.6506 18.1834 16.457 19.5199 14.969 20.4552C13.481 21.3906 11.7592 21.8869 10.0016 21.8869C8.24406 21.8869 6.52222 21.3906 5.03424 20.4552C3.54626 19.5199 2.35262 18.1834 1.59068 16.5996C0.828736 15.0158 0.52946 13.249 0.72729 11.5026C0.925119 9.75624 1.61202 8.1012 2.70893 6.72796L1.48385 5.50373C1.32824 5.34822 1.3282 5.096 1.48376 4.94044L2.38689 4.03731C2.54241 3.88179 2.79456 3.88179 2.95008 4.03731L4.17535 5.26258V5.26154ZM10.0016 19.8137C10.9549 19.8137 11.8989 19.6259 12.7797 19.2611C13.6605 18.8963 14.4607 18.3616 15.1349 17.6875C15.809 17.0134 16.3437 16.2131 16.7085 15.3323C17.0733 14.4516 17.2611 13.5076 17.2611 12.5542C17.2611 11.6009 17.0733 10.6569 16.7085 9.77614C16.3437 8.89537 15.809 8.09509 15.1349 7.42099C14.4607 6.74688 13.6605 6.21215 12.7797 5.84733C11.8989 5.4825 10.9549 5.29473 10.0016 5.29473C8.07627 5.29473 6.22979 6.05957 4.86837 7.42099C3.50695 8.78241 2.74212 10.6289 2.74212 12.5542C2.74212 14.4796 3.50695 16.326 4.86837 17.6875C6.22979 19.0489 8.07627 19.8137 10.0016 19.8137ZM5.85333 0.507611C5.85333 0.287671 6.03162 0.109375 6.25156 0.109375H13.7517C13.9716 0.109375 14.1499 0.287671 14.1499 0.50761V1.78528C14.1499 2.00522 13.9716 2.18352 13.7517 2.18352H6.25156C6.03162 2.18352 5.85333 2.00522 5.85333 1.78528V0.507611Z" fill="#789194" />
+        <path d="M14.1114 13.7299L11.417 12.1743L13.753 8.12819L5.88927 11.3779L8.58366 12.9335L6.25025 16.975L14.1114 13.7299Z" fill="#789194" />
+      </svg>
+
+      Video Optimiser</span>
+    <input
+      type="checkbox"
+      id="optimiser-2"
+      name="optimiser[]"
+      class="data-optimiser calculator__data-text-option" />
+  </label>
+  <p class="calculator__help-text calculator__help-text-panel closed background--tertiary">
+    MobileX’s
+    <b>Video</b>
+    and
+    <b>Speed Optimizers</b>
+    will teach you
+    the most efficient ways to adjust your device’s settings for data
+                                                    use.</p>
+  <p class="calculator__help-text">
+    Ok so here’s your mobile data prediction, based on the estimates
+    you’ve made above. REMEMBER—mobile data isn’t used whenever you’re
+                                                    on a WiFi network, like at home or at work.</p>
+</div>
+    <div class="calculator__total-cards">
+  <div class="calculator__total-card">
+    <span class="caps">Your Calculation</span>
+    <div class="calculator__total-card__value">
+      <span id="total">0</span>
+    </div>
+    per month
+  </div>
+  <div class="calculator__total-card calculator__total-card--primary">
+    <span class="caps">Your Price</span>
+    <div class="calculator__total-card__value">
+      $<span id="total-price">0.00</span>
+    </div>
+    <i>(includes
+      <b>$1.99</b>
+      platform fee)</i>
+  </div>
+</div>
+  </section>
+  <section class="phone"></section>
+</form>
+      <h2>More Content</h2>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, animi
+  perspiciatis! Id perferendis quo iste, cupiditate tenetur voluptatum
+                adipisci numquam, totam sit porro accusantium possimus ipsum vero, autem
+                quam voluptatem?</p>
+<p>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam iusto
+  ut, ad dicta cum laudantium minima mollitia blanditiis ullam. Deserunt
+                ratione quasi ducimus error voluptate odio praesentium atque nostrum
+                natus.</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nihil
+  illo quae quo voluptates! Quia fugiat, quisquam eos cum sapiente ad
+                nostrum atque provident voluptate magni aut voluptatibus? Odio,
+                explicabo.</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nihil
+  illo quae quo voluptates! Quia fugiat, quisquam eos cum sapiente ad
+                nostrum atque provident voluptate magni aut voluptatibus? Odio,
+                explicabo.</p>
+<h2>More Content</h2>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, animi
+  perspiciatis! Id perferendis quo iste, cupiditate tenetur voluptatum
+                              adipisci numquam, totam sit porro accusantium possimus ipsum vero, autem
+                              quam voluptatem?</p>
+<p>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam iusto
+  ut, ad dicta cum laudantium minima mollitia blanditiis ullam. Deserunt
+                              ratione quasi ducimus error voluptate odio praesentium atque nostrum
+                              natus.</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nihil
+  illo quae quo voluptates! Quia fugiat, quisquam eos cum sapiente ad
+                              nostrum atque provident voluptate magni aut voluptatibus? Odio,
+                              explicabo.</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nihil
+  illo quae quo voluptates! Quia fugiat, quisquam eos cum sapiente ad
+                              nostrum atque provident voluptate magni aut voluptatibus? Odio,
+                              explicabo.</p>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
