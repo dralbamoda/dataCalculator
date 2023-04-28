@@ -16,24 +16,24 @@
             "label": "0"
           },
           {
+            "value": 75,
+            "label": "50"
+          },
+          {
+            "value": 150,
+            "label": "100"
+          },
+          {
             "value": 225,
             "label": "150"
           },
           {
-            "value": 1125,
-            "label": "750"
+            "value": 300,
+            "label": "200"
           },
           {
-            "value": 2250,
-            "label": "1500"
-          },
-          {
-            "value": 4500,
-            "label": "3000"
-          },
-          {
-            "value": 11250,
-            "label": "7500+"
+            "value": 375,
+            "label": "250+"
           }
         ]
       },
@@ -104,8 +104,8 @@
             "label": "2hrs"
           },
           {
-            "value": 10240,
-            "label": "4hrs+"
+            "label": "4hrs+",
+            "value": 10240
           }
         ]
       },

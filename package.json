@@ -2,12 +2,15 @@
   "name": "data-calculator",
   "version": "0.0.1",
   "description": "Range slider calculator",
-  "main": "main.js",
+  "main": "src/js/main.js",
   "scripts": {
     "start": "npm run serve",
-    "build": "liquidjs --context @./data.json --template @./index.liquid > index.html && npm run lint",
-    "lint": "prettier --write .",
-    "serve": "live-server & nodemon --watch . --ext .liquid --exec 'echo \"reloading...\" && npm run build'"
+    "serve": "live-server --open=./build & nodemon --watch . --ext .liquid --exec 'echo \"reloading...\" && npm run build'",
+    "build": "npm run build:html && npm run build:css && npm run build:assets && npm run lint",
+    "build:html": "liquidjs --context @./src/data/data.json --template @./src/index.liquid > build/index.html",
+    "build:css": "postcss src/css --dir build/css --use autoprefixer",
+    "build:assets": "cp -r src/js src/data src/fonts src/images build/",
+    "lint": "prettier --write build"
   },
   "repository": {
     "type": "git",
@@ -26,11 +29,15 @@
   },
   "homepage": "https://github.com/dralbamoda/dataCalculator#readme",
   "devDependencies": {
-    "liquidjs": "^10.7.0",
-    "live-server": "^1.2.2",
+    "autoprefixer": "^10.4.14",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
+    "liquidjs": "^10.7.0",
+    "live-server": "^1.2.2",
     "nodemon": "^2.0.22",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "postcss-nesting": "^11.2.2",
     "prettier": "2.8.7"
   },
   "husky": {
@@ -40,5 +47,6 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
-  }
+  },
+  "dependencies": {}
 }
