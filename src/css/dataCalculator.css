@@ -101,63 +101,48 @@ form {
   --tertiary-light: #f1f6f4;
   --grey: #e9edea;
   --track: var(--grey);
-}
 
-/* @media (prefers-color-scheme: dark) {
-	html,
-	body {
-		--background: var(--darkbg);
-		--track-color: var(--secondary);
-	}
+  .calculator__graph {
+    --amount: 100deg;
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 20em;
+    margin: 2em 0;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    transition: background 1s ease;
+    background-color: white;
+    background: conic-gradient(
+      var(--background) 0deg 2deg,
+      var(--primary) 2deg var(--amount),
+      var(--track) var(--amount) 358deg,
+      var(--background) 358deg 360deg
+    );
+    &::after {
+      content: "";
+      display: block;
+      width: 17em;
+      height: 17em;
+      background: var(--background);
+      border-radius: 50%;
+      margin: auto;
+    }
 
-	.calculator {
-		--grey: var(--secondary);
-		--secondary: var(--tertiary);
-		--track: var(--track-color);
-	}
-} */
-
-.calculator .calculator__graph {
-  --amount: 100deg;
-  position: relative;
-  display: flex;
-  width: 20em;
-  height: 20em;
-  margin: 2em 0;
-  border-radius: 50%;
-  transform: rotate(180deg);
-  transition: background 1s ease;
-  background-color: white;
-  background: conic-gradient(
-    var(--background) 0deg 2deg,
-    var(--primary) 2deg var(--amount),
-    var(--track) var(--amount) 358deg,
-    var(--background) 358deg 360deg
-  );
-}
-
-.calculator .calculator__graph::after {
-  content: "";
-  display: block;
-  width: 17em;
-  height: 17em;
-  background: var(--background);
-  border-radius: 50%;
-  margin: auto;
-}
-
-.calculator .calculator__graph::before {
-  content: "";
-  display: block;
-  width: 14.75em;
-  height: 14.75em;
-  background: var(--background);
-  border-radius: 50%;
-  margin: auto;
-  position: absolute;
-  bottom: 2.25em;
-  right: 2.25em;
-  border: 0.375em solid var(--tertiary);
+    &::before {
+      content: "";
+      display: block;
+      width: 14.75em;
+      height: 14.75em;
+      background: var(--background);
+      border-radius: 50%;
+      margin: auto;
+      position: absolute;
+      bottom: 2.25em;
+      right: 2.25em;
+      border: 0.375em solid var(--tertiary);
+    }
+  }
 }
 
 .calculator .calculator__graph .hero::after {

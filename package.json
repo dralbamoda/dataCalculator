@@ -8,7 +8,7 @@
     "serve": "live-server --open=./build & nodemon --watch . --ext .liquid --exec 'echo \"reloading...\" && npm run build'",
     "build": "npm run build:html && npm run build:css && npm run build:assets && npm run lint",
     "build:html": "liquidjs --context @./src/data/data.json --template @./src/index.liquid > build/index.html",
-    "build:css": "postcss src/css --dir build/css --use autoprefixer",
+    "build:css": "postcss src/css --dir build/css --use autoprefixer postcss-nesting --watch",
     "build:assets": "cp -r src/js src/data src/fonts src/images build/",
     "lint": "prettier --write build"
   },

@@ -48,28 +48,6 @@ body {
   text-transform: uppercase;
 }
 
-/* @media (prefers-color-scheme: dark) {
-	html,
-	body {
-		--darkbg: #111;
-  	--darkfg: #eee;
-		--background: var(--darkbg);
-		--forground: var(--darkfg);
-		--track-color: var(--secondary);
-		color: var(--forground);
-	}
-
-	.container {
-		background: var(--background);
-	}
-
-	.calculator {
-		--grey: var(--secondary);
-		--secondary: var(--tertiary);
-		--track: var(--track-color);
-	}
-} */
-
 * {
   padding: 0;
   margin: 0;
