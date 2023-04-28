@@ -60,8 +60,16 @@ form {
     grid-template-areas:
       "main head"
       "main foot";
-    grid-template-rows: 380px 1fr;
+    grid-template-rows: 360px 1fr;
     grid-template-columns: auto 500px;
+  }
+
+  .head {
+    grid-area: head;
+    position: relative;
+    top: 12em;
+    z-index: 4;
+    display: block;
   }
 
   .nav {
@@ -71,6 +79,9 @@ form {
   .foot {
     grid-area: foot;
     padding: 4em;
+    top: 9em;
+    position: relative;
+    padding: 0 4em;
   }
 
   .phone {
@@ -87,10 +98,39 @@ form {
     background-repeat: no-repeat;
     pointer-events: none;
     background-position: center top;
+
+    .phone-content {
+      width: 100%;
+      padding: 1em 2em;
+
+      & svg {
+        width: 100%;
+      }
+    }
+
+    .phone-heading {
+      padding: 0 2em;
+      & h2 {
+        font-size: 1.75em;
+        padding-bottom: 0.25em;
+        border-bottom: var(--secondary) 5px solid;
+      }
+    }
   }
 
   form {
     width: 100%;
+  }
+
+  .calculator {
+    .header__sticky {
+      .header__left {
+        display: none;
+      }
+      .header__right {
+        display: none;
+      }
+    }
   }
 }
 
@@ -101,6 +141,43 @@ form {
   --tertiary-light: #f1f6f4;
   --grey: #e9edea;
   --track: var(--grey);
+
+  .header__sticky {
+    .header__left {
+      display: block;
+      position: absolute;
+      bottom: -1em;
+      left: 5.5em;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-color: var(--primary);
+        margin-right: 1em;
+        border-radius: 50%;
+      }
+    }
+    .header__right {
+      display: block;
+      position: absolute;
+      bottom: -1em;
+      right: 5.5em;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-color: var(--grey);
+        margin-left: 1em;
+        border-radius: 50%;
+      }
+    }
+  }
 
   .calculator__graph {
     --amount: 100deg;
@@ -119,6 +196,11 @@ form {
       var(--track) var(--amount) 358deg,
       var(--background) 358deg 360deg
     );
+
+    @media (min-width: 900px) {
+      margin: 0;
+    }
+
     &::after {
       content: "";
       display: block;
@@ -370,11 +452,10 @@ form {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1.5em 0 0.5em;
+    padding: 1em 0 1em;
     border-top: 2px solid var(--grey);
     z-index: 3;
     background: var(--background);
-    height: 80px;
   }
 
   .calculator__option-row label span {
@@ -395,19 +476,23 @@ form {
   .calculator__help-text-panel {
     position: relative;
     z-index: 1;
-    transform: translateY(0%);
-    transition: transform 0.3s ease;
-    height: 80px;
+    max-height: 100px;
+    transition: max-height 0.15s ease-out, padding 0.15s ease-out;
+    overflow: hidden;
+    height: auto;
+    padding: 1em;
+    border-top: 2px solid var(--grey);
 
     &.closed {
-      transform: translateY(-100%);
+      max-height: 0;
+      padding: 0 1em;
+      transition: max-height 0.15s ease-in, padding 0.15s ease-out;
     }
   }
 
   .calculator__help-text {
     position: relative;
     z-index: 2;
-    padding: 1em;
     border-radius: 0px 0px 0.5em 0.5em;
   }
 
