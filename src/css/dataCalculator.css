@@ -121,17 +121,6 @@ form {
   form {
     width: 100%;
   }
-
-  .calculator {
-    .header__sticky {
-      .header__left {
-        display: none;
-      }
-      .header__right {
-        display: none;
-      }
-    }
-  }
 }
 
 .calculator {
@@ -155,7 +144,7 @@ form {
         display: inline-block;
         width: 1em;
         height: 1em;
-        background-color: var(--primary);
+        background-color: var(--grey);
         margin-right: 1em;
         border-radius: 50%;
       }
@@ -172,9 +161,18 @@ form {
         display: inline-block;
         width: 1em;
         height: 1em;
-        background-color: var(--grey);
+        background-color: var(--primary);
         margin-left: 1em;
         border-radius: 50%;
+      }
+    }
+
+    @media (max-width: 899px) {
+      .header__left {
+        display: none;
+      }
+      .header__right {
+        display: none;
       }
     }
   }
