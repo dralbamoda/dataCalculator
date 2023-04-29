@@ -1,5 +1,5 @@
 :root {
-  --spacing: 1em;
+  --spacing: 1.5em;
 }
 
 html,
@@ -29,7 +29,7 @@ body {
 
 @media (min-width: 480px) {
   .container {
-    padding: calc(var(--spacing) * 2);
+    --spacing: 2em;
   }
 }
 
@@ -65,8 +65,14 @@ b {
 
 h1 {
   font-family: gilroyextrabold, sans-serif;
-  font-size: 43px;
+  font-size: 26px;
   margin-bottom: 1em;
+  text-align: center;
+
+  @media (min-width: 900px) {
+    font-size: 43px;
+    text-align: left;
+  }
 }
 
 h1,
@@ -77,10 +83,28 @@ h2,
 
 .entry-text {
   font-family: gilroyregular, sans-serif;
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 1.3;
+  text-align: center;
+
+  @media (min-width: 900px) {
+    font-size: 1.25em;
+    text-align: left;
+  }
 }
 
 label {
   font-family: gilroysemibold, sans-serif;
+}
+
+.desktop-only {
+  @media (max-width: 899px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  @media (min-width: 900px) {
+    display: none;
+  }
 }
