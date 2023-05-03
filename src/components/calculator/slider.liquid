@@ -26,7 +26,11 @@
     class="data calculator__data" />
   <datalist class="calculator__datalist" id="{{slider.id}}-markers">
     {% for option in slider.options %}
-      <option value="{{option.value}}" label="{{option.label}}"></option>
+      <option
+        value="{{option.value}}"
+        data-dailylabel="{{option.dailyLabel}}"
+        data-label="{{option.label}}"
+        label="{{option.label}}"></option>
     {% endfor %}
   </datalist>
 </div>

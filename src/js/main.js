@@ -32,11 +32,28 @@ fetch("./data/data.json")
         mockList.classList.add("calculator__datalist-mock");
         const data = list.children;
         Object.values(data).forEach((o) => {
+          const dailyOptionLabel = o.getAttribute("data-dailylabel");
+          console.info();
           const opt = document.createElement("div");
           opt.textContent = o.label;
+          opt.setAttribute("data-value", o.value);
+          opt.setAttribute("data-label", o.label);
+          opt.setAttribute("data-dailyLabel", dailyOptionLabel);
           mockList.appendChild(opt);
         });
         list.parentElement.appendChild(mockList);
+      });
+    };
+
+    const updateRangeValues = (id, value) => {
+      const slider = document.querySelector(`#${id}`);
+      const section = slider.parentElement.querySelector(
+        ".calculator__datalist-mock"
+      );
+      Array.from(section.children).forEach((c) => {
+        const label = c.getAttribute("data-label");
+        const dailyLabel = c.getAttribute("data-dailylabel");
+        c.textContent = value === 1 ? label : dailyLabel;
       });
     };
 
@@ -54,7 +71,7 @@ fetch("./data/data.json")
     const setPeriod = (event) => {
       const id = event.target.name.replace("unit-", "").replace("[]", "");
       const value = parseInt(event.target.value);
-      // const thisValue = parseInt(document.querySelector(`#${id}`).value);
+      updateRangeValues(id, value);
 
       const thisStoreValue = currentValues.find((cv) => cv.id === id);
       if (thisStoreValue) {
@@ -78,7 +95,7 @@ fetch("./data/data.json")
 
     const setValue = (animate = false) => {
       const currentValue = Object.values(currentValues).reduce(
-        (acc, v) => acc + v.value * v.scale,
+        (acc, v) => acc + v.value, // * v.scale
         0
       );
       const dataInGB = currentValue / 1024;

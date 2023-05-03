@@ -13,27 +13,33 @@
         "options": [
           {
             "value": 0,
-            "label": "0"
+            "label": "0",
+            "dailyLabel": "0"
           },
           {
             "value": 75,
-            "label": "50"
+            "label": "1500",
+            "dailyLabel": "50"
           },
           {
             "value": 150,
-            "label": "100"
+            "label": "3000",
+            "dailyLabel": "100"
           },
           {
             "value": 225,
-            "label": "150"
+            "label": "4500",
+            "dailyLabel": "150"
           },
           {
             "value": 300,
-            "label": "200"
+            "label": "6000",
+            "dailyLabel": "200"
           },
           {
             "value": 375,
-            "label": "250+"
+            "label": "7500+",
+            "dailyLabel": "250+"
           }
         ]
       },
@@ -49,27 +55,33 @@
         "options": [
           {
             "value": 0,
-            "label": "0MB"
+            "label": "0",
+            "dailyLabel": "0"
           },
           {
             "value": 95,
-            "label": "10 mins"
+            "label": "5 hrs",
+            "dailyLabel": "10 mins"
           },
           {
             "value": 285,
-            "label": "30 mins"
+            "label": "15 hrs",
+            "dailyLabel": "30 mins"
           },
           {
             "value": 570,
-            "label": "1hr"
+            "label": "30 hrs",
+            "dailyLabel": "1hr"
           },
           {
             "value": 1140,
-            "label": "2hrs"
+            "label": "60 hrs",
+            "dailyLabel": "2hrs"
           },
           {
             "value": 2280,
-            "label": "4hrs+"
+            "label": "120 hrs+",
+            "dailyLabel": "4 hrs+"
           }
         ]
       },
@@ -85,27 +97,33 @@
         "options": [
           {
             "value": 0,
-            "label": "0MB"
+            "label": "0",
+            "dailyLabel": "0"
           },
           {
             "value": 426.66,
-            "label": "10 mins"
+            "label": "5 hrs",
+            "dailyLabel": "10 mins"
           },
           {
             "value": 1280,
-            "label": "30 mins"
+            "label": "15 hrs",
+            "dailyLabel": "30 mins"
           },
           {
             "value": 2560,
-            "label": "1hr"
+            "label": "30 hrs",
+            "dailyLabel": "1hr"
           },
           {
             "value": 5120,
-            "label": "2hrs"
+            "label": "60 hrs",
+            "dailyLabel": "2hrs"
           },
           {
-            "label": "4hrs+",
-            "value": 10240
+            "value": 10240,
+            "label": "120 hrs+",
+            "dailyLabel": "4 hrs+"
           }
         ]
       },
@@ -121,7 +139,8 @@
         "options": [
           {
             "value": 0,
-            "label": "0 mins"
+            "label": "5 hrs",
+            "dailyLabel": "10 mins"
           },
           {
             "value": 25,
@@ -129,19 +148,23 @@
           },
           {
             "value": 75,
-            "label": "30 mins"
+            "label": "15 hrs",
+            "dailyLabel": "30 mins"
           },
           {
             "value": 150,
-            "label": "1hr"
+            "label": "30 hrs",
+            "dailyLabel": "1hr"
           },
           {
             "value": 300,
-            "label": "2hrs"
+            "label": "60 hrs",
+            "dailyLabel": "2hrs"
           },
           {
             "value": 600,
-            "label": "4hrs+"
+            "label": "120 hrs+",
+            "dailyLabel": "4 hrs+"
           }
         ]
       },
@@ -149,7 +172,7 @@
         "id": "apps",
         "name": "Apps and games",
         "value": 0,
-        "helpText": "Number of apps/games you’d download and use regularly",
+        "helpText": "Number of apps/games you'd download and use regularly",
         "scale": 1,
         "calculation": 35,
         "calculationUnit": "item",
@@ -157,27 +180,33 @@
         "options": [
           {
             "value": 0,
-            "label": "0"
+            "label": "0",
+            "dailyLabel": "0"
           },
           {
             "value": 700,
-            "label": "20"
+            "label": "20",
+            "dailyLabel": "0.6"
           },
           {
             "value": 1050,
-            "label": "30"
+            "label": "30",
+            "dailyLabel": "1"
           },
           {
             "value": 1575,
-            "label": "45"
+            "label": "45",
+            "dailyLabel": "1.5"
           },
           {
             "value": 1750,
-            "label": "50"
+            "label": "50",
+            "dailyLabel": "1.6"
           },
           {
             "value": 2100,
-            "label": "60+"
+            "label": "60+",
+            "dailyLabel": "2"
           }
         ]
       },
@@ -193,27 +222,33 @@
         "options": [
           {
             "value": 0,
-            "label": "0"
+            "label": "0",
+            "dailyLabel": "0"
           },
           {
             "value": 2.5,
-            "label": "5"
+            "label": "5",
+            "dailyLabel": "0.16"
           },
           {
             "value": 12.5,
-            "label": "25"
+            "label": "25",
+            "dailyLabel": "0.8"
           },
           {
             "value": 25,
-            "label": "50"
+            "label": "50",
+            "dailyLabel": "1.6"
           },
           {
             "value": 50,
-            "label": "100"
+            "label": "100",
+            "dailyLabel": "3"
           },
           {
             "value": 125,
-            "label": "250+"
+            "label": "250+",
+            "dailyLabel": "8"
           }
         ]
       }
