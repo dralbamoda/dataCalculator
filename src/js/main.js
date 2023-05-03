@@ -93,6 +93,10 @@ fetch("./data/data.json")
       return (dataInGB / totalValue) * 360;
     };
 
+    const getDegrees270 = (dataInGB) => {
+      return (dataInGB / totalValue) * 270;
+    };
+
     const setValue = (animate = false) => {
       const currentValue = Object.values(currentValues).reduce(
         (acc, v) => acc + v.value, // * v.scale
@@ -101,12 +105,13 @@ fetch("./data/data.json")
       const dataInGB = currentValue / 1024;
       collector.textContent = `${dataInGB.toFixed(2)}GB`;
       hero.textContent = `${dataInGB.toFixed(2)}`;
-      const degrees = getDegrees(dataInGB);
+      const degrees = getDegrees270(dataInGB);
       topGraph.style.setProperty(
         "--amount",
         `${degrees > 358 ? 358 : degrees}deg`
       );
       totalPrice.textContent = `${getCost(dataInGB).toFixed(2)}`;
+
       const optimiser = optimiserValues
         ? Object.values(optimiserValues).find((v) => v.checked)?.value || 0
         : 0;

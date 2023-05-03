@@ -32,8 +32,8 @@ fetch("./data/data.json")
         mockList.classList.add("calculator__datalist-mock");
         const data = list.children;
         Object.values(data).forEach((o) => {
-          const dailyOptionLabel = o.getAttribute('data-dailylabel');
-          console.info()
+          const dailyOptionLabel = o.getAttribute("data-dailylabel");
+          console.info();
           const opt = document.createElement("div");
           opt.textContent = o.label;
           opt.setAttribute("data-value", o.value);
@@ -47,13 +47,15 @@ fetch("./data/data.json")
 
     const updateRangeValues = (id, value) => {
       const slider = document.querySelector(`#${id}`);
-      const section = slider.parentElement.querySelector('.calculator__datalist-mock');
+      const section = slider.parentElement.querySelector(
+        ".calculator__datalist-mock"
+      );
       Array.from(section.children).forEach((c) => {
         const label = c.getAttribute("data-label");
         const dailyLabel = c.getAttribute("data-dailylabel");
         c.textContent = value === 1 ? label : dailyLabel;
       });
-    }
+    };
 
     const setRanges = (event) => {
       const id = event.target.id;
@@ -91,20 +93,25 @@ fetch("./data/data.json")
       return (dataInGB / totalValue) * 360;
     };
 
+    const getDegrees270 = (dataInGB) => {
+      return (dataInGB / totalValue) * 270;
+    };
+
     const setValue = (animate = false) => {
       const currentValue = Object.values(currentValues).reduce(
-        (acc, v) => acc + v.value,// * v.scale
+        (acc, v) => acc + v.value, // * v.scale
         0
       );
       const dataInGB = currentValue / 1024;
       collector.textContent = `${dataInGB.toFixed(2)}GB`;
       hero.textContent = `${dataInGB.toFixed(2)}`;
-      const degrees = getDegrees(dataInGB);
+      const degrees = getDegrees270(dataInGB);
       topGraph.style.setProperty(
         "--amount",
         `${degrees > 358 ? 358 : degrees}deg`
       );
       totalPrice.textContent = `${getCost(dataInGB).toFixed(2)}`;
+      
       const optimiser = optimiserValues
         ? Object.values(optimiserValues).find((v) => v.checked)?.value || 0
         : 0;
