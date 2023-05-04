@@ -84,17 +84,18 @@ h2,
   font-family: gilroyextrabold, sans-serif;
 }
 
+/* John CSS -  Design aligment - 05-05-23 - Entry-yet line height and font size shift, was line-height: 1.3; & font-size: 1.25 (desktop) 1em (mobile)*/
+
 .entry-text {
   font-family: gilroyregular, sans-serif;
-  font-size: 1em;
-  line-height: 1.3;
+  font-size: 1.2em;
+  line-height: 1.5;
   text-align: center;
 }
 
 @media (min-width: 900px) {
-
 .entry-text {
-    font-size: 1.25em;
+    font-size: 1.45em;
     text-align: left;
 }
   }
