@@ -548,10 +548,13 @@ form {
       transition: max-height 0.15s ease-in, padding 0.15s ease-out;
     }
 
+/* John CSS -  Design aligment - 05-05-23 - added forced font weight value */
+
 .calculator .calculator__help-text {
     position: relative;
     z-index: 2;
     border-radius: 0px 0px 0.5em 0.5em;
+    font-weight: 300;
   }
 
 /* === range theme and appearance === */
