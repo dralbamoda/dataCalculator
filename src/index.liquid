@@ -13,9 +13,13 @@
   <body>
     {% assign test = calculator %}
     <main class="container">
-      {% include 'src/components/topContent.liquid' %}
+{% comment %}
+      Blocked for new design {% include 'src/components/topContent.liquid' %}
+{% endcomment %}
       {% include 'src/components/calculator/calculator.liquid' %}
-      {% include 'src/components/bottomContent.liquid' %}
+{% comment %}
+      Blocked for new design {% include 'src/components/bottomContent.liquid' %}
+{% endcomment %} 
     </main>
     <script src="./js/main.js"></script>
   </body>
