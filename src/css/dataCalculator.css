@@ -144,14 +144,12 @@ form {
       text-transform: uppercase;
     }
 
-/* John CSS -  Design aligment - 05-05-23 - removed background colour value, was: )*/
-
 .calculator .header__sticky .header__left::before {
         content: "";
         display: inline-block;
         width: 1em;
         height: 1em;
-        /* background-color: var(--grey); */
+        background-color: var(--grey);
         margin-right: 1em;
         border-radius: 50%;
       }
@@ -170,7 +168,7 @@ form {
         display: inline-block;
         width: 1em;
         height: 1em;
-        /* background-color: var(--primary); */
+        background-color: var(--primary);
         margin-left: 1em;
         border-radius: 50%;
       }
