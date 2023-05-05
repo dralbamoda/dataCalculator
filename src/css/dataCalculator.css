@@ -85,6 +85,8 @@ form {
     padding: 0 4em;
   }
 
+/* John CSS -  Design aligment - 05-05-23 - added phone image with background fill, adjusted the z index, was 4)*/
+
   .phone {
     display: block;
     position: absolute;
@@ -93,7 +95,7 @@ form {
     width: 500px;
     height: 100%;
     background: transparent;
-    z-index: 4;
+    z-index: 0;
     background-image: url(../images/device.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -142,12 +144,14 @@ form {
       text-transform: uppercase;
     }
 
+/* John CSS -  Design aligment - 05-05-23 - removed background colour value, was: )*/
+
 .calculator .header__sticky .header__left::before {
         content: "";
         display: inline-block;
         width: 1em;
         height: 1em;
-        background-color: var(--grey);
+        /* background-color: var(--grey); */
         margin-right: 1em;
         border-radius: 50%;
       }
@@ -166,7 +170,7 @@ form {
         display: inline-block;
         width: 1em;
         height: 1em;
-        background-color: var(--primary);
+        /* background-color: var(--primary); */
         margin-left: 1em;
         border-radius: 50%;
       }
@@ -497,6 +501,8 @@ form {
   }
     }
 
+ /* John CSS -  Design aligment - 05-05-23 - background colour removed: was -  background: var(--background); */
+
 .calculator .calculator__option-row label {
     position: relative;
     display: flex;
@@ -506,7 +512,6 @@ form {
     padding: 1em 0 1em;
     border-top: 2px solid var(--grey);
     z-index: 3;
-    background: var(--background);
   }
 
 .calculator .calculator__option-row label span {
@@ -519,9 +524,11 @@ form {
     font-size: 0.6em;
   }
 
+ /* John CSS -  Design aligment - 05-05-23 - icon size adjustment was 2em for both values */
+
 .calculator .calculator__option-row svg {
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
   }
 
 .calculator .calculator__help-text-panel {
