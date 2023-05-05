@@ -11,7 +11,7 @@ body {
   --tertiary: #789194;
   --grey: #e9edea;
   --track: var(--grey);
-  --background: #fff;
+  --background: #fff; 
   --forground: #333;
   --track-color: var(--grey);
   font-size: 16px;
@@ -33,11 +33,12 @@ body {
   }
 }
 
+/* John CSS -  Design aligment - 05-05-23 - Back ground colour value removed was:   background-color: var(--background); */
+
 .header__sticky {
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: var(--background);
   width: 100%;
   display: flex;
   justify-content: center;
