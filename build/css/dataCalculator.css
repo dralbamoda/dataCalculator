@@ -661,8 +661,8 @@ form {
     position: relative;
     background: #ecefed;
     overflow: hidden;
-    --thumb-height: 1em;
-    --track-height: 1em;
+    --thumb-height: .9em;
+    --track-height: .9em;
     --brightness-hover: 180%;
     --brightness-down: 80%;
     --clip-edges: 1em;
