@@ -94,12 +94,13 @@ form {
     right: 0;
     width: 500px;
     height: 100%;
-    background: transparent;
+    background: #fff;
     background-image: url(../images/device.png);
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
     background-position: center top;
+    padding: 0%;
   }
 
   .phone-highlight {
@@ -107,12 +108,11 @@ form {
     position: absolute;
     top: 0;
     right: 0;
-    border-style: hidden;
     width: 500px;
     height: 100%;
-    background: transparent;
-    z-index: 5;
-    background-image: url(../images/higlight.png);
+    z-index: 4;
+    background-image: url(../images/higlightest.png);
+    mix-blend-mode: screen;
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
