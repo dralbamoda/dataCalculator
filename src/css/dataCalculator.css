@@ -68,7 +68,7 @@ form {
   .head {
     grid-area: head;
     position: relative;
-    top: 12em;
+    top: 11.6em;
     z-index: 4;
     display: block;
   }
@@ -82,7 +82,7 @@ form {
     padding: 4em;
     top: 9em;
     position: relative;
-    padding: 0 4em;
+    padding: .4em 4em;
   }
 
 /* John CSS -  Design aligment - 05-05-23 - added phone image with background fill, adjusted the z index, was 4)*/
@@ -121,7 +121,7 @@ form {
 
     .phone .phone-content {
       width: 100%;
-      padding: 1em 2em;
+      padding: .8em 2em;
     }
 
       .phone .phone-content svg {
@@ -131,9 +131,13 @@ form {
     .phone .phone-heading {
       padding: 0 2em;
     }
+
+/* John CSS -  Design aligment - 05-05-23 - changed the fontweight and size, tempted to break the h2 but didnt at this*/
+
       .phone .phone-heading h2 {
-        font-size: 1.75em;
-        padding-bottom: 0.25em;
+        font-size: 1.8em;
+        padding-bottom: 0.2em;
+        font-family: gilroybold, sans-serif;
         border-bottom: var(--secondary) 5px solid;
       }
 
@@ -461,14 +465,14 @@ form {
 .calculator .calculator__total-cards {
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: 1.4em;
   }
 
 .calculator .calculator__total-card {
     width: 100%;
     background-color: var(--secondary);
     padding: 1em;
-    border-radius: 0.7em;
+    border-radius: .8em;
     z-index: 1;
     font-size: 0.75em;
     color: #fff;
@@ -482,7 +486,7 @@ form {
 .calculator .calculator__total-card__value {
     font-size: 2.5em;
     font-weight: 900;
-    font-family: "gilroysemibold";
+    font-family: "gilroybold";
   }
 
  /* John CSS -  Design aligment - 05-05-23 - removed  - font-size: 1em; */
@@ -554,7 +558,7 @@ form {
   }
     }
 
- /* John CSS -  Design aligment - 05-05-23 - background colour removed: was -  background: var(--background); */
+ /* John CSS -  Design aligment - 05-05-23 - background colour removed: was -  background: var(--background); added border-bottom:*/
 
 .calculator .calculator__option-row label {
     position: relative;
@@ -564,6 +568,7 @@ form {
     width: 100%;
     padding: 1em 0 1em;
     border-top: 2px solid var(--grey);
+    border-bottom: 2px solid var(--grey);
     z-index: 3;
   }
 
@@ -587,22 +592,38 @@ form {
     height: 1.5em;
   }
 
+/* John CSS -  Design aligment - 06-05-23 - removed border-top: 2px solid var(--grey);  */
+
 .calculator .calculator__help-text-panel {
     position: relative;
     z-index: 1;
     max-height: 100px;
-    transition: max-height 0.15s ease-out, padding 0.15s ease-out;
     overflow: hidden;
     height: auto;
     padding: 1em;
-    border-top: 2px solid var(--grey);
     mix-blend-mode: multiply;
+    font-size: .9em;
+  }
+
+  @media (max-width: 900px) {
+  .calculator .calculator__help-text-panel {
+  transition: max-height 0.15s linear, padding 0.15s linear;
+    }
   }
 
 .calculator .calculator__help-text-panel.closed {
       max-height: 0;
       padding: 0 1em;
-      transition: max-height 0.15s ease-in, padding 0.15s ease-out;
+      transition: max-height 0.15s linear, padding 0.15s linear;
+    }
+
+    /* John CSS -  Design aligment - 05-05-23 - created an invisisbile empty area so the price cards become sticky */    
+
+    @media (min-width: 900px) {
+      .calculator .calculator__help-text-panel.closed {
+        visibility: hidden;
+        min-height: 82px;
+      }
     }
 
 /* John CSS -  Design aligment - 05-05-23 - added forced font weight value */
@@ -612,6 +633,8 @@ form {
     z-index: 2;
     border-radius: 0px 0px 0.5em 0.5em;
     font-weight: 300;
+    font-size: .9em;
+    letter-spacing: -.01em;
   }
 
 /* === range theme and appearance === */
