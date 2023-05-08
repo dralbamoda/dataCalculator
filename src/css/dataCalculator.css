@@ -622,7 +622,7 @@ form {
     @media (min-width: 900px) {
       .calculator .calculator__help-text-panel.closed {
         visibility: hidden;
-        min-height: 82px;
+        min-height: 83px;
       }
     }
 
