@@ -94,7 +94,7 @@ fetch("./data/data.json")
     };
 
     const getDegrees270 = (dataInGB) => {
-      return (dataInGB / totalValue) * 270;
+      return (dataInGB / totalValue) * 360;
     };
 
     const setValue = (animate = false) => {
