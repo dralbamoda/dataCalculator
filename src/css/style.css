@@ -2,6 +2,8 @@
   --spacing: 1.5em;
 }
 
+
+
 html,
 body {
   --darkbg: #111;
@@ -36,7 +38,7 @@ body {
 /* John CSS -  Design aligment - 05-05-23 - Back ground colour value removed was:   background-color: var(--background); */
 
 .header__sticky {
-  position: sticky;
+  position: absolute;
   top: 0;
   z-index: 2;
   width: 100%;
@@ -48,6 +50,7 @@ body {
 
 @media (max-width: 900px) {
   .header__sticky {
+    position: absolute;
     background-color: var(--background);
   }
 }
@@ -81,6 +84,45 @@ h1 {
 
 @media (min-width: 900px) {
 
+  .divider{
+    position: absolute;
+    height: 650px;
+    width: 1px;
+    margin-top: 240px;
+    margin-left: 636px;
+    background-color: #ccc;
+  
+}
+
+.phone_overlay_1{
+position: absolute;
+left: 770px;
+right: 50px;
+top: 234px;
+z-index: 1000;
+height: 660px;
+background: #F1F6F4;
+mix-blend-mode: multiply;
+opacity: 0.6;
+border-radius: 40.2015px;
+}
+
+.phone_overlay_2{
+position: absolute;
+left: 775px;
+right: 65px;
+top: 244px;
+transform: rotate(180deg);
+z-index: 1000;
+height: 400px;
+mix-blend-mode: soft-light;
+background: linear-gradient(156.04deg, rgba(255, 255, 255, 0) 41.8%, #FFFFFF 59.16%);
+opacity: 0.9;
+border-radius: 40.2015px;
+}
+
+
+
 h1 {
     font-size: 43px;
     text-align: left;
@@ -109,8 +151,8 @@ h2,
  
 position: absolute;
 
-left: 680px;
-width: 540px;
+left: 643px;
+width: 570px;
 font-size: 17px;
 top: -130px;
 
