@@ -98,13 +98,14 @@ h1 {
 position: absolute;
 left: 770px;
 right: 50px;
-top: 234px;
+top: 404px;
 z-index: 1000;
-height: 660px;
+transform: rotate(45deg);
+height: 400px;
 background: #F1F6F4;
 mix-blend-mode: multiply;
 opacity: 0.6;
-border-radius: 40.2015px;
+border-radius: 400px;
 }
 
 .phone_overlay_2{
@@ -113,7 +114,7 @@ left: 775px;
 right: 65px;
 top: 244px;
 transform: rotate(180deg);
-z-index: 1000;
+z-index: 100;
 height: 400px;
 mix-blend-mode: soft-light;
 background: linear-gradient(156.04deg, rgba(255, 255, 255, 0) 41.8%, #FFFFFF 59.16%);
@@ -152,7 +153,7 @@ h2,
 position: absolute;
 
 left: 643px;
-width: 570px;
+width: 520px;
 font-size: 17px;
 top: -130px;
 
