@@ -13,33 +13,23 @@
         "options": [
           {
             "value": 0,
-            "label": "0",
-            "dailyLabel": "0"
+            "label": "0 pages",
+            "dailyLabel": "0 pages"
           },
           {
             "value": 75,
-            "label": "1500",
-            "dailyLabel": "50"
-          },
-          {
-            "value": 150,
-            "label": "3000",
-            "dailyLabel": "100"
-          },
-          {
-            "value": 225,
-            "label": "4500",
-            "dailyLabel": "150"
+            "label": "2500",
+            "dailyLabel": "85"
           },
           {
             "value": 300,
-            "label": "6000",
-            "dailyLabel": "200"
+            "label": "5000",
+            "dailyLabel": "170"
           },
           {
             "value": 375,
-            "label": "7500+",
-            "dailyLabel": "250+"
+            "label": "7500+ pages",
+            "dailyLabel": "250+ pages"
           }
         ]
       },
@@ -51,37 +41,27 @@
         "scale": 1,
         "calculation": 9.5,
         "calculationUnit": "minute",
-        "calculationExplanation": "9.5MB per minute",
+        "calculationExplanation": "9.5MB per video",
         "options": [
           {
             "value": 0,
-            "label": "0",
-            "dailyLabel": "0"
+            "label": "0 videos",
+            "dailyLabel": "0 videos"
           },
           {
-            "value": 95,
-            "label": "5 hrs",
-            "dailyLabel": "10 mins"
+            "value": 1710,
+            "label": "180",
+            "dailyLabel": "6"
           },
           {
-            "value": 285,
-            "label": "15 hrs",
-            "dailyLabel": "30 mins"
+            "value": 3420,
+            "label": "360",
+            "dailyLabel": "12"
           },
           {
-            "value": 570,
-            "label": "30 hrs",
-            "dailyLabel": "1hr"
-          },
-          {
-            "value": 1140,
-            "label": "60 hrs",
-            "dailyLabel": "2hrs"
-          },
-          {
-            "value": 2280,
-            "label": "120 hrs+",
-            "dailyLabel": "4 hrs+"
+            "value": 5130,
+            "label": "540+ videos",
+            "dailyLabel": "18+ videos"
           }
         ]
       },
@@ -98,32 +78,22 @@
           {
             "value": 0,
             "label": "0",
-            "dailyLabel": "0"
+            "dailyLabel": "0 mins"
           },
           {
-            "value": 426.66,
-            "label": "5 hrs",
-            "dailyLabel": "10 mins"
+            "value": 4266,
+            "label": "10",
+            "dailyLabel": ""
           },
           {
-            "value": 1280,
-            "label": "15 hrs",
-            "dailyLabel": "30 mins"
+            "value": 8532,
+            "label": "20",
+            "dailyLabel": ""
           },
           {
-            "value": 2560,
-            "label": "30 hrs",
-            "dailyLabel": "1hr"
-          },
-          {
-            "value": 5120,
-            "label": "60 hrs",
-            "dailyLabel": "2hrs"
-          },
-          {
-            "value": 10240,
-            "label": "120 hrs+",
-            "dailyLabel": "4 hrs+"
+            "value": 12798,
+            "label": "30+ movies",
+            "dailyLabel": "1+ movies"
           }
         ]
       },
@@ -139,32 +109,23 @@
         "options": [
           {
             "value": 0,
-            "label": "5 hrs",
-            "dailyLabel": "10 mins"
+            "label": "0 mins",
+            "dailyLabel": "0 mins"
           },
           {
-            "value": 25,
-            "label": "10 mins"
+            "value": 1200,
+            "label": "480",
+            "dailyLabel": "16"
           },
           {
-            "value": 75,
-            "label": "15 hrs",
-            "dailyLabel": "30 mins"
+            "value": 2400,
+            "label": "960",
+            "dailyLabel": "32"
           },
           {
-            "value": 150,
-            "label": "30 hrs",
-            "dailyLabel": "1hr"
-          },
-          {
-            "value": 300,
-            "label": "60 hrs",
-            "dailyLabel": "2hrs"
-          },
-          {
-            "value": 600,
-            "label": "120 hrs+",
-            "dailyLabel": "4 hrs+"
+            "value": 3600,
+            "label": "1440+ mins",
+            "dailyLabel": "48+ mins"
           }
         ]
       },
@@ -180,13 +141,8 @@
         "options": [
           {
             "value": 0,
-            "label": "0",
-            "dailyLabel": "0"
-          },
-          {
-            "value": 700,
-            "label": "20",
-            "dailyLabel": "0.6"
+            "label": "0 apps",
+            "dailyLabel": "0 apps"
           },
           {
             "value": 1050,
@@ -194,19 +150,14 @@
             "dailyLabel": "1"
           },
           {
-            "value": 1575,
-            "label": "45",
-            "dailyLabel": "1.5"
-          },
-          {
-            "value": 1750,
-            "label": "50",
-            "dailyLabel": "1.6"
-          },
-          {
             "value": 2100,
-            "label": "60+",
+            "label": "60",
             "dailyLabel": "2"
+          },
+          {
+            "value": 3150,
+            "label": "90+ apps",
+            "dailyLabel": "3+ apps"
           }
         ]
       },
@@ -223,32 +174,22 @@
           {
             "value": 0,
             "label": "0",
-            "dailyLabel": "0"
+            "dailyLabel": "0 emails"
           },
           {
-            "value": 2.5,
-            "label": "5",
-            "dailyLabel": "0.16"
+            "value": 300,
+            "label": "600",
+            "dailyLabel": "30"
           },
           {
-            "value": 12.5,
-            "label": "25",
-            "dailyLabel": "0.8"
+            "value": 600,
+            "label": "1200",
+            "dailyLabel": "60"
           },
           {
-            "value": 25,
-            "label": "50",
-            "dailyLabel": "1.6"
-          },
-          {
-            "value": 50,
-            "label": "100",
-            "dailyLabel": "3"
-          },
-          {
-            "value": 125,
-            "label": "250+",
-            "dailyLabel": "8"
+            "value": 900,
+            "label": "1800+ emails",
+            "dailyLabel": "90+ emails"
           }
         ]
       }
