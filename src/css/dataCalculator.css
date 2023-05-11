@@ -120,8 +120,8 @@ height: 800px;
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
-    width: 500px;
+   right: 3px;
+width: 338px;
     height: 100%;
     z-index: 4;
     background-image: url(../images/higlightest.png);
@@ -390,8 +390,23 @@ right: 2.15em;
           background: #fff;
           }
 
+         
    
     }
+
+       @media (min-width: 900px) {
+ .calculator .calculator__sliders {
+   margin-top: 90px;
+  }
+
+       }
+
+        @media (max-width: 899px) {
+
+            .calculator .calculator__sliders {
+   margin-top: 380px;
+  }
+}
 
 .calculator .calculator__graph .hero {
       position: absolute;
@@ -499,6 +514,7 @@ right: 2.15em;
     justify-content: center;
     flex-direction: column;
     gap: 1em;
+
     padding: 1em 1em 2em 1em;
   }
 
@@ -837,7 +853,7 @@ right: 2.15em;
       .calculator .calculator__help-text-panel.closed {
         visibility: hidden;
 
-        min-height: 82px;
+        min-height: 50px;
 
       }
 
