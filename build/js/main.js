@@ -93,8 +93,10 @@ fetch("./data/data.json")
       return (dataInGB / totalValue) * 360;
     };
 
+/* John CSS -  Design aligment - 05-05-23 - going cowboy forced wheel to render slightly past 360 degree's */
+
     const getDegrees270 = (dataInGB) => {
-      return (dataInGB / totalValue) * 360;
+      return (dataInGB / totalValue) * 368;
     };
 
     const setValue = (animate = false) => {
@@ -111,7 +113,7 @@ fetch("./data/data.json")
         `${degrees > 358 ? 358 : degrees}deg`
       );
       totalPrice.textContent = `${getCost(dataInGB).toFixed(2)}`;
-      
+
       const optimiser = optimiserValues
         ? Object.values(optimiserValues).find((v) => v.checked)?.value || 0
         : 0;
