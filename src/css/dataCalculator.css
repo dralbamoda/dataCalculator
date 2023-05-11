@@ -347,7 +347,11 @@ form {
     justify-content: center;
     flex-direction: column;
     gap: 1em;
-    padding: 1em 0;
+    padding: 1em 1em 2em 1em;
+  }
+
+  .calculator__slider {
+    padding-bottom: .5em;
   }
 
 /* John CSS -  Design aligment - 05-05-23 - font size change from .9em to 1.1em, Padding bottom from .25em to .5em */
@@ -406,7 +410,7 @@ form {
       -moz-appearance: none;
            appearance: none;
       font-size: 1em;
-      margin: 0 1em 0 1em;
+      margin: 0 .5em 0 2em;
     }
 
 .calculator .calculator__sliders .calculator__radio::after {
@@ -622,7 +626,7 @@ form {
     @media (min-width: 900px) {
       .calculator .calculator__help-text-panel.closed {
         visibility: hidden;
-        min-height: 83px;
+        min-height: 82px;
       }
     }
 
