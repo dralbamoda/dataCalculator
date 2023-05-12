@@ -545,6 +545,15 @@ margin-right: auto;
 
  @media (max-width: 899px) {
 
+    .calculator .calculator__sliders .calculator__radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
+      font-size: 10px;
+      margin: 0 .5em 0 2em;
+      margin-top: 1px;
+    }
+
     .calculator .calculator__sliders .calculator__slider-label {
       display: flex;
       justify-content: space-between;
@@ -642,6 +651,16 @@ font-size: 65px;
     }
 
 
+.calculator .calculator__sliders .calculator__radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
+      font-size: 10px;
+      margin: 0 .5em 0 2em;
+      margin-top: -1px;
+    }
+
+
  /* John CSS -  Design aligment - 05-05-23 - font size change from 1em to 1.1em */
 
 .calculator .calculator__sliders .calculator__slider-label {
@@ -694,14 +713,7 @@ font-size: 65px;
 
  /* John CSS -  Design aligment - 05-05-23 - adjusted margins value to open up a group was - margin: 0 0.25em 0 0.5em; */
 
-.calculator .calculator__sliders .calculator__radio {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-           appearance: none;
-      font-size: 10px;
-      margin: 0 .5em 0 2em;
-      margin-top: 2px;
-    }
+
 
 .calculator .calculator__sliders .calculator__radio::after {
       content: "";
@@ -893,7 +905,7 @@ transition: 0.25s background-color ease;
 /* John CSS -  Design aligment - 05-05-23 - removed top line = border-top: 1px solid var(--grey); reoved padding: 1em 0 0; */
 
 .calculator .calculator__section-label {
-    font-size: 0.94em;
+        font-size: 12px;
     font-family: gilroysemibold, sans-serif;
     line-height: 1.5;
     color: var(--tertiary);

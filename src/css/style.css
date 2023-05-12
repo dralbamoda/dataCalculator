@@ -265,7 +265,7 @@ font-size: 17px;
 label {
   font-family: "gilroyregular";
    color: #789194;
-  font-size: 12px;
+    font-size: .9em;
 }
   }
 
@@ -277,7 +277,7 @@ label {
 
 label {
   font-family: "gilroyregular";
-font-size: 11.57px;
+font-size: 11px;
     color: #789194;
 }
   }
