@@ -14,7 +14,7 @@ fetch("./data/data.json")
         0
       ) / 1024;
 
-    const cpg = 0.5;
+    const cpg = 2.10;
     const platformFee = 1.99;
     const values = document.querySelectorAll(".data");
     const periods = document.querySelectorAll(".period");
