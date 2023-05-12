@@ -102,6 +102,7 @@ width: 385px;
 
   .phone {
     display: block;
+    
     position: absolute;
 top: 190px;
 right: 40px;
@@ -450,7 +451,7 @@ margin-right: auto;
     background-color: #f1f3f1;
     width: 3px;
     height: 1.3em;
-    margin-left: -2px;
+    margin-left: -5px;
     position: absolute;
     bottom: 1.49em;
     z-index: 2;
@@ -502,11 +503,11 @@ margin-right: auto;
       content: "";
     display: block;
     background-color: var(--tertiary);
-    width: 0.15em;
-    height: 0.15em;
-    position: absolute;
-    bottom: 2.75em;
-    margin-right: -2px;
+width: 0.3em;
+height: 0.3em;
+position: absolute;
+bottom: 2.8em;
+margin-left: -2.2px;
     transform: translate(-0.25em, 0);
     border-radius: 100%;
     z-index: 3;

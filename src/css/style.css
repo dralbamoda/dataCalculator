@@ -106,20 +106,20 @@ display: flex;
   }
 
   .footer-content{
-    text-align: center;
-    position: relative;
-    margin-left: 20%;
-    margin-top: 25px;
-    font-size: 13px;
-        width: 80%;
+text-align: center;
+position: relative;
+margin-left: 15%;
+margin-top: 45px;
+font-size: 13px;
+width: 75%;
   }
 
 
   .footer-divider{
   height: 650px;
     height: 1px;
-   
-    width: 120%;
+   margin-left: 5%;
+    width: 95%;
     margin-top: 260px;
     background-color: #ccc;
     position: relative;
