@@ -23,6 +23,8 @@ form {
 }
 .nav {
   grid-area: main;
+      top: 0px;
+position: relative;
 }
 .foot {
   grid-area: foot;
@@ -55,6 +57,10 @@ form {
 }
 
 @media (min-width: 900px) {
+
+    p {
+      margin-bottom: 0.75em;
+}
   .page {
     display: grid;
     grid-template-areas:
@@ -63,6 +69,7 @@ form {
     grid-template-rows: 360px 1fr;
     grid-template-columns: auto 500px;
     gap: 2em;
+    margin-top: -275px;
   }
 
   .head {
@@ -75,12 +82,18 @@ form {
 
   .nav {
     grid-area: main;
+    width: 80%;
+    top: 110px;
+    position: absolute;
   }
 
   .foot {
     grid-area: foot;
     padding: 4em;
-    top: 9em;
+ 
+top: 175px;
+    left: 97px;
+width: 385px;
     position: relative;
     padding: .4em 4em;
   }
@@ -89,11 +102,13 @@ form {
 
   .phone {
     display: block;
+    
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 500px;
-    height: 100%;
+top: 190px;
+right: 40px;
+  width: 345px;
+height: 800px;
+
     background: #fff;
     background-image: url(../images/device.png);
     background-size: contain;
@@ -106,10 +121,10 @@ form {
   .phone-highlight {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 500px;
-    height: 100%;
+   top: -15px;
+right: 1px;
+width: 338px;
+height: 100%;
     z-index: 4;
     background-image: url(../images/higlightest.png);
     mix-blend-mode: screen;
@@ -125,20 +140,29 @@ form {
     }
 
       .phone .phone-content svg {
-        width: 100%;
+
+width: 110%;
+    margin-left: -11px;
+    margin-top: -8px;
       }
 
     .phone .phone-heading {
       padding: 0 2em;
+          width: 300px;
     }
 
 /* John CSS -  Design aligment - 05-05-23 - changed the fontweight and size, tempted to break the h2 but didnt at this*/
 
       .phone .phone-heading h2 {
-        font-size: 1.8em;
-        padding-bottom: 0.2em;
-        font-family: gilroybold, sans-serif;
-        border-bottom: var(--secondary) 5px solid;
+font-size: 21px;
+    width: 263px;
+    text-align: left;
+    font-weight: 700;
+    margin-top: -26px;
+    margin-left: -23px;
+    padding-bottom: 0.3em;
+    font-family: 'gilroysemibold';
+    border-bottom: var(--secondary) 3px solid;
       }
 
   form {
@@ -168,15 +192,8 @@ form {
   }
 }
 
-.calculator .header__sticky .header__left {
-      display: block;
-      position: absolute;
-      bottom: -1em;
-      left: 5.5em;
-      font-size: 0.75em;
-      color: #789194;
-      text-transform: uppercase;
-    }
+
+       
 
 .calculator .header__sticky .header__left::before {
         content: "";
@@ -188,15 +205,6 @@ form {
         border-radius: 50%;
       }
 
-.calculator .header__sticky .header__right {
-      display: block;
-      position: absolute;
-      bottom: -1em;
-      right: 5.5em;
-      font-size: 0.75em;
-      color: #789194;
-      text-transform: uppercase;
-    }
 
 .calculator .header__sticky .header__right::after {
         content: "";
@@ -210,20 +218,36 @@ form {
 
 
 @media (max-width: 899px) {
+
+
       .calculator .header__sticky .header__left {
+        display: none;
+        top: 317px;
+        margin-left: 0px;
         display: none;
       }
       .calculator .header__sticky .header__right {
         display: none;
       }
+
+      .calculator .header__sticky .header__right {
+        display: none;
+      position: absolute;
+      bottom: -1em;
+      right: 5.5em;
+      font-size: 0.7em;
+      color: #789194;
+      text-transform: uppercase;
     }
 
-.calculator .calculator__graph {
+      .calculator .calculator__graph {
     --amount: 100deg;
     position: relative;
     display: flex;
-    width: 20em;
-    height: 20em;
+        width: 17em;
+    height: 17em;
+    top: 165px;
+    right: -100px;
     margin: 2em 0;
     border-radius: 50%;
     transform: rotate(180deg);
@@ -233,40 +257,172 @@ form {
       var(--background) 0deg 2deg,
       var(--primary) 2deg var(--amount),
       var(--track) var(--amount) 358deg,
-      var(--background) 358deg 360deg
+      #eaedea 358deg 360deg
     );
   }
+
+  
+
+
+
+    }
+@media (min-width: 900px) {
+
+    .calculator .header__sticky .header__left {
+      display: block;
+      position: absolute;
+      bottom: -1em;
+      left: 5.5em;
+      font-size: 7.71px;
+      color: #789194;
+      text-transform: uppercase;
+    }
+
+
+.calculator .header__sticky .header__right {
+      display: block;
+      position: absolute;
+      bottom: -1em;
+      right: 5.5em;
+      font-size: 7.71px;
+      color: #789194;
+      text-transform: uppercase;
+    }
+
+
+
+    .calculator .header__sticky .header__left {
+
+    top: 361px;
+    margin-left: 122px;
+    
+    }
+
+    .calculator .header__sticky .header__right {
+
+    top: 361px;
+    margin-left: 100px;
+    left: 241px;
+    
+    }
+
+    .calculator .calculator__graph {
+    --amount: 100deg;
+    position: relative;
+    display: flex;
+     width: 13.3em;
+    height: 13.3em;
+    top: 165px;
+    right: -100px;
+    margin: 2em 0;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    transition: background 1s ease;
+    background-color: white;
+    background: conic-gradient(
+      var(--background) 0deg 2deg,
+      var(--primary) 2deg var(--amount),
+      var(--track) var(--amount) 358deg,
+      var(--background_2) 358deg 360deg
+    );
+  }
+}
+
+
+
+
+
+
+@media (max-width: 899px) {
+
+.calculator .calculator__graph {
+
+    top: 0px;
+    right: 0px;
+     margin-left: auto;
+     margin-right: auto;
+   
+  }
+
+  .calculator .calculator__graph::after {
+      content: "";
+      display: block;
+         width: 14.5em;
+    height: 14.5em;
+      background: #f1f3f1;
+      border-radius: 50%;
+      margin: auto;
+    }
+
+    .calculator .calculator__graph::before {
+    content: "";
+    display: block;
+    width: 12.5em;
+    height: 12.5em;
+    background: #f1f3f1;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    bottom: 1.9em;
+    right: 1.9em;
+    border: 0.375em solid var(--tertiary);
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+.calculator .calculator__graph {
+
+top: 0px;
+right: 0px;
+margin-left: auto;
+margin-right: auto;
+   
+  }
+}
+
 
 @media (min-width: 900px) {
 
 .calculator .calculator__graph {
-      margin: 0;
+    margin: 0;
+    top: 145px;
+    right: -39px;
   }
-    }
 
-.calculator .calculator__graph::after {
+  .calculator .calculator__graph::after {
       content: "";
       display: block;
-      width: 17em;
-      height: 17em;
+    width: 11.3em;
+    height: 11.3em;
       background: #f1f3f1;
       border-radius: 50%;
       margin: auto;
     }
+
+
 
 .calculator .calculator__graph::before {
       content: "";
       display: block;
-      width: 14.75em;
-      height: 14.75em;
+      width: 9.5em;
+      height: 9.5em;
       background: #f1f3f1;
       border-radius: 50%;
       margin: auto;
       position: absolute;
-      bottom: 2.25em;
-      right: 2.25em;
+     bottom: 1.55em;
+    right: 1.55em;
       border: 0.375em solid var(--tertiary);
     }
+    }
+
+
+
+
+
 
 /* John CSS -  Design aligment - 05-05-23 - added mobile only colour values*/
 
@@ -278,7 +434,52 @@ form {
         .calculator .calculator__graph::before {
           background: #fff;
           }
+
+         
+   
     }
+
+       @media (min-width: 900px) {
+ .calculator .calculator__sliders {
+   margin-top: 50px;
+  }
+
+  .calculator .calculator__graph .hero::after {
+          content: "";
+    display: block;
+    border-left: 0.05em solid var(--tertiary);
+    background-color: #f1f3f1;
+    width: 3px;
+    height: 1.3em;
+    margin-left: -2px;
+    position: absolute;
+    bottom: 1.49em;
+    z-index: 2;
+      }
+
+       }
+
+        @media (max-width: 899px) {
+
+            .calculator .calculator__sliders {
+
+    margin-top: 302px;
+  }
+
+  .calculator .calculator__graph .hero::after {
+        content: "";
+        display: block;
+           border-left: 0.05em solid var(--tertiary);
+        background-color: #fff;
+        width: 3px;
+    height: 1.6em;
+        position: absolute;
+            margin-left: -4px;
+          bottom: 1.89em;
+        z-index: 2;
+      }
+
+}
 
 .calculator .calculator__graph .hero {
       position: absolute;
@@ -292,83 +493,174 @@ form {
       align-items: center;
     }
 
-.calculator .calculator__graph .hero::after {
-        content: "";
-        display: block;
-        border-left: 0.125em solid var(--tertiary);
-        background-color: #f1f3f1;
-        width: 0.5em;
-        height: 1.75em;
-        position: absolute;
-        bottom: 2.25em;
-        z-index: 2;
-      }
 
-.calculator .calculator__graph .hero::before {
-        content: "";
-        display: block;
-        background-color: var(--tertiary);
-        width: 0.375em;
-        height: 0.375em;
-        position: absolute;
-        bottom: 4em;
-        transform: translate(-0.25em, 0);
-        border-radius: 50%;
-        z-index: 3;
-      }
 
-.calculator .calculator__graph .hero__number {
-      font-size: 4.3em;
+
+
+ @media (min-width: 900px) {
+
+    .calculator .calculator__graph .hero::before {
+      content: "";
+    display: block;
+    background-color: var(--tertiary);
+width: 0.3em;
+height: 0.3em;
+position: absolute;
+bottom: 2.8em;
+margin-left: 0.5px;
+    transform: translate(-0.25em, 0);
+    border-radius: 100%;
+    z-index: 3;
+}
+
+
+       .calculator .calculator__graph .hero__number {
+      font-size: 2.9em;
       font-weight: 900;
       color: var(--primary);
-      margin-top: .7em;
+      margin-top: .2em;
       margin-bottom: -10px;
     }
 
+
 .calculator .calculator__graph .hero__units {
       color: var(--primary);
-      font-size: 1em;
+          font-size: 9.26px;
       font-weight: normal;
+      margin-left: 2.5px;
       font-family: gilroyextrabold;
       padding: 0.25em 0 0.3em;
 
     }
 
+
 .calculator .calculator__graph .hero__period {
       color: var(--secondary);
-      font-size: 0.8125em;
+          font-size: 9.26px;
       font-weight: 500;
       border-top: 1px solid currentcolor;
       padding: 0.5em 0 0.7em;
     }
 
-.calculator .calculator__sliders {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1em;
-    padding: 1em 1em 2em 1em;
-  }
+}
 
-  .calculator__slider {
-    padding-bottom: .5em;
-  }
+ @media (max-width: 899px) {
 
-/* John CSS -  Design aligment - 05-05-23 - font size change from .9em to 1.1em, Padding bottom from .25em to .5em */
+    .calculator .calculator__sliders .calculator__radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
+      font-size: 10px;
+      margin: 0 .5em 0 2em;
+      margin-top: 1px;
+    }
 
-.calculator .calculator__sliders .calculator__slider-label {
+    .calculator .calculator__sliders .calculator__slider-label {
       display: flex;
       justify-content: space-between;
-      padding-bottom: 0.25em;
+      padding-bottom: 0.2em;
       font-family: gilroysemibold, sans-serif;
-      font-size: 1.1em;
-      line-height: 1.5;
+          font-size: 12px !important;
+   
       font-weight: 500;
       color: var(--tertiary);
       z-index: 1;
     }
 
+
+    .calculator .calculator__graph .hero::before {
+        content: "";
+    display: block;
+    background-color: var(--tertiary);
+    width: 0.15em;
+    height: 0.15em;
+    position: absolute;
+        bottom: 3.45em;
+        margin-left: -1.5px;
+        margin-right: -2.5px;
+    transform: translate(-0.25em, 0);
+    border-radius: 100%;
+    z-index: 3;
+}
+
+
+.calculator .calculator__graph .hero__number {
+font-size: 65px;
+    font-weight: 900;
+    color: var(--primary);
+    position: absolute;
+    top: 90px;
+    margin-bottom: -10px;
+    }
+
+
+.calculator .calculator__graph .hero__units {
+    color: var(--primary);
+        font-size: 11px;
+    position: relative;
+       margin-top: 96px;
+    font-weight: normal;
+    font-family: gilroyextrabold;
+    padding: 0.25em 0 0.3em;
+
+    }
+
+
+.calculator .calculator__graph .hero__period {
+      color: var(--secondary);
+      font-size: 11px;
+      font-weight: 500;
+      border-top: 1px solid currentcolor;
+      padding: 0.5em 0 0.7em;
+    }
+
+
+}
+
+
+
+
+.calculator .calculator__sliders {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.2em;
+
+    padding: 1em 1em 2em 1em;
+  }
+
+  .calculator__slider {
+    padding-bottom: .5em;
+
+  }
+
+/* John CSS -  Design aligment - 05-05-23 - font size change from .9em to 1.1em, Padding bottom from .25em to .5em */
+
+
 @media (min-width: 900px) {
+
+    .calculator .calculator__sliders .calculator__slider-label {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.2em;
+      font-family: gilroysemibold, sans-serif;
+          font-size: 14px !important;
+    line-height: 1.45;
+      font-weight: 500;
+      color: var(--tertiary);
+      z-index: 1;
+    }
+
+
+.calculator .calculator__sliders .calculator__radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
+      font-size: 10px;
+      margin: 0 .5em 0 2em;
+      margin-top: -1px;
+    }
+
 
  /* John CSS -  Design aligment - 05-05-23 - font size change from 1em to 1.1em */
 
@@ -391,6 +683,23 @@ form {
 .calculator .calculator__sliders .calculator__slider-period {
         font-size: 0.65em;
     }
+
+    .calculator .calculator__sliders .calculator__slider-label-help {
+      color: var(--tertiary);
+      font-size: 0.7em;
+      padding-bottom: .25em;
+    }
+
+    .calculator .calculator__total-card {
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 0.5em;
+    max-height: 70px;
+    border-radius: .8em;
+    z-index: 1;
+    font-size: 0.55em;
+    color: #fff;
+  }
       }
 
  /* John CSS -  Design aligment - 05-05-23 - added padding-top: .5em; - font-family: "gilroysemibold"; */
@@ -399,24 +708,19 @@ form {
       display: flex;
       align-items: center;
       text-transform: uppercase;
-      padding-top: .5em;
+      
       font-family: "gilroysemibold";
     }
 
  /* John CSS -  Design aligment - 05-05-23 - adjusted margins value to open up a group was - margin: 0 0.25em 0 0.5em; */
 
-.calculator .calculator__sliders .calculator__radio {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-           appearance: none;
-      font-size: 1em;
-      margin: 0 .5em 0 2em;
-    }
+
 
 .calculator .calculator__sliders .calculator__radio::after {
       content: "";
       display: block;
       width: 1em;
+
       height: 1em;
       border-radius: 50%;
       background-color: var(--grey);
@@ -429,11 +733,43 @@ form {
 
  /* John CSS -  Design aligment - 05-05-23 - font size change from .75em to .9em, added padding-bottom value */
 
+@media (max-width: 899px) {
 .calculator .calculator__sliders .calculator__slider-label-help {
       color: var(--tertiary);
-      font-size: 0.9em;
+          font-size: 10.48px;
       padding-bottom: .25em;
     }
+
+    .calculator .calculator__total-card {
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 1em;
+    max-height: none;
+    border-radius: .8em;
+    z-index: 1;
+    font-size: 0.75em;
+    color: #fff;
+  }
+
+
+      .calculator .calculator__data-text-option::after {
+content: "";
+display: block;
+width: .8em;
+height: .8em;
+margin-top: 5px;
+    margin-left: -10px;
+    margin-right: -6px;
+position: relative;
+/* left: 10px; */
+    border: 1px solid var(--grey);
+border-radius: 50%;
+background-color: transparent;
+transition: 0.25s background-color ease;
+    }
+
+
+}
 
 .calculator .calculator__datalist {
     position: relative;
@@ -470,17 +806,10 @@ form {
     display: flex;
     flex-direction: row;
     gap: 1.4em;
+        margin-top: 13px;
   }
 
-.calculator .calculator__total-card {
-    width: 100%;
-    background-color: var(--secondary);
-    padding: 1em;
-    border-radius: .8em;
-    z-index: 1;
-    font-size: 0.75em;
-    color: #fff;
-  }
+
 
 .calculator .calculator__total-card--primary {
     background-color: var(--primary);
@@ -488,7 +817,7 @@ form {
   }
 
 .calculator .calculator__total-card__value {
-    font-size: 2.5em;
+    font-size: 27px;
     font-weight: 900;
     font-family: "gilroybold";
   }
@@ -497,17 +826,21 @@ form {
 
 .calculator .calculator__data-text-option {
     -webkit-appearance: none;
+    margin-left: 10px;
     -moz-appearance: none;
-         appearance: none;
+    appearance: none;
     margin-right: 1em;
     height: 2em;
   }
 
-.calculator .calculator__data-text-option::after {
+.calculator .optimizer.calculator__data-text-option::after {
       content: "";
       display: block;
-      width: 1.5em;
-      height: 1.5em;
+        width: 1.5em;
+    height: 1.5em;
+    margin-top: 1px;
+    margin-right: 15px;
+    left: 10px;
       border: 0.25em solid var(--grey);
       border-radius: 50%;
       background-color: transparent;
@@ -526,29 +859,54 @@ form {
 
 @media (min-width: 900px) {
 
+    .calculator .calculator__data-text-option::after {
+content: "";
+display: block;
+width: .8em;
+height: .8em;
+margin-top: 5px;
+margin-right: 0px;
+position: relative;
+/* left: 10px; */
+    border: 1px solid var(--grey);
+border-radius: 50%;
+background-color: transparent;
+transition: 0.25s background-color ease;
+    }
+
+    .calculator .optimizer.calculator__data-text-option::after {
+        width: 1.5em;
+    height: 1.5em;
+    margin-top: 1px;
+    margin-right: 15px;
+
+}
+
 .calculator .calculator__options {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1em;
+      gap: 1em;    
+      margin-left: -10px;
   }
     }
 
 .calculator .calculator__options label {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 0 0 1em 0;
-      font-weight: 100;
-      font-size: 0.9em;
-      flex: 1;
+    /* width: 113px; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 1em 0;
+    font-weight: 100;
+    font-size: 12px;
+    /* flex: 1;*/
     }
 
 /* John CSS -  Design aligment - 05-05-23 - removed top line = border-top: 1px solid var(--grey); reoved padding: 1em 0 0; */
 
 .calculator .calculator__section-label {
-    font-size: 0.94em;
+        font-size: 12px;
     font-family: gilroysemibold, sans-serif;
     line-height: 1.5;
     color: var(--tertiary);
@@ -558,11 +916,8 @@ form {
 @media (min-width: 900px) {
 
 .calculator .calculator__section-label {
-      font-size: 1.1em;
+          font-size: 14px;
   }
-    }
-
- /* John CSS -  Design aligment - 05-05-23 - background colour removed: was -  background: var(--background); added border-bottom:*/
 
 .calculator .calculator__option-row label {
     position: relative;
@@ -570,11 +925,63 @@ form {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1em 0 1em;
+      padding: .90em 0 .35em;
+    border-top: 1px solid var(--grey);
+    border-bottom: 2px solid var(--grey);
+    z-index: 3;
+    }
+
+    .calculator .calculator__help-text {
+    position: relative;
+    z-index: 2;
+    border-radius: 0px 0px 0.5em 0.5em;
+
+    font-size: 10.6px;
+    letter-spacing: -.01em;
+
+
+  }
+
+      .calculator .calculator__help-text.bolder{
+    position: relative;
+    z-index: 2;
+    border-radius: 0px 0px 0.5em 0.5em;
+
+    font-size: 10.6px;
+
+
+    font-weight: 400;
+    font-family: 'gilroyregular';
+  }
+
+}
+
+ /* John CSS -  Design aligment - 05-05-23 - background colour removed: was -  background: var(--background); added border-bottom:*/
+@media (max-width: 899px) {
+.calculator .calculator__option-row label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+      padding: 1em 0 1em;
     border-top: 2px solid var(--grey);
     border-bottom: 2px solid var(--grey);
     z-index: 3;
   }
+
+  .calculator .calculator__help-text {
+    position: relative;
+    z-index: 2;
+    border-radius: 0px 0px 0.5em 0.5em;
+    font-weight: 300;
+    font-size: .9em;
+    letter-spacing: -.01em;
+  }
+
+}
+
+
 
 .calculator .calculator__option-row label span {
     display: inline-flex;
@@ -598,13 +1005,13 @@ form {
 
 /* John CSS -  Design aligment - 06-05-23 - removed border-top: 2px solid var(--grey);  */
 
-.calculator .calculator__help-text-panel {
+ .calculator .calculator__help-text-panel {
     position: relative;
     z-index: 1;
     max-height: 100px;
     overflow: hidden;
     height: auto;
-    padding: 1em;
+    padding: .35em;
     mix-blend-mode: multiply;
     font-size: .9em;
   }
@@ -626,20 +1033,25 @@ form {
     @media (min-width: 900px) {
       .calculator .calculator__help-text-panel.closed {
         visibility: hidden;
-        min-height: 82px;
+
+        min-height: 64px;
+
       }
+
+      .calculator .calculator__help-text-panel {
+    position: relative;
+    z-index: 1;
+    max-height: 100px;
+    overflow: hidden;
+    height: auto;
+       padding: 1em;
+    mix-blend-mode: multiply;
+    font-size: .7em;
+  }
     }
 
 /* John CSS -  Design aligment - 05-05-23 - added forced font weight value */
 
-.calculator .calculator__help-text {
-    position: relative;
-    z-index: 2;
-    border-radius: 0px 0px 0.5em 0.5em;
-    font-weight: 300;
-    font-size: .9em;
-    letter-spacing: -.01em;
-  }
 
 /* === range theme and appearance === */
 
@@ -665,8 +1077,8 @@ form {
     position: relative;
     background: #ecefed;
     overflow: hidden;
-    --thumb-height: .9em;
-    --track-height: .9em;
+    --thumb-height: 19px;
+    --track-height: 19px;
     --brightness-hover: 180%;
     --brightness-down: 80%;
     --clip-edges: 1em;
@@ -678,6 +1090,7 @@ form {
   .calculator input[type="range"]::-webkit-slider-runnable-track,
   .calculator input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
+        margin-top: -1px;
     height: var(--thumb-height);
   }
 

@@ -5,20 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Calculator</title>
-    <link rel="stylesheet" href="./css/fonts.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/dataCalculator.css" />
+    <link rel="stylesheet" href="./css/fonts.css?j=1" />
+    <link rel="stylesheet" href="./css/style.css?j=1" />
+    <link rel="stylesheet" href="./css/dataCalculator.css?j=1" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3F2L3PJPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D3F2L3PJPF');
+</script>
   </head>
 
   <body>
     
     <main class="container">
 
-      <form class="calculator page">
+      <p class="entry-text-left">
+      <span class="pulloff">“</span><span style="color:#0F261F">IF I DON'T KNOW </span><span style="color:#50f40c;">HOW MUCH DATA I NEED,</span><span style="color:#0F261F"> HOW CAN YOU?”</span></p>
+    <p class="entry-text">
+      Great question! Our AI-guided mobile data forecast takes about 10 days to accurately predict your usage, but you can check out this handy data calculator to get an idea of how much you might be using each month.</p>
+<form class="calculator page">
   <section class="page__section head">
     <div class="header__sticky">
+
+
   <div class="calculator__graph">
+
     <div class="hero">
+    
       <div id="hero" class="hero__number">00.00</div>
       <div class="hero__units caps">Gigabytes</div>
       <div class="hero__period caps">Over 30 Days</div>
@@ -27,9 +44,18 @@
   <div class="header__left">Time Remaining</div>
   <div class="header__right">Data Remaining</div>
 </div>
+
   </section>
+  <p class="divider">&nbsp;</p>
+
+   
+   
+
+
   <section class="page__section nav">
-  
+
+ 
+
     <div class="calculator__sliders">
   
     
@@ -62,7 +88,7 @@
     
       <option
         value="0"
-        data-dailylabel="0"
+        data-dailylabel="0 pages"
         data-label="0 pages"
         label="0 pages"></option>
     
@@ -71,7 +97,7 @@
         data-dailylabel="85"
         data-label="2500"
         label="2500"></option>
-
+    
       <option
         value="300"
         data-dailylabel="170"
@@ -80,7 +106,7 @@
     
       <option
         value="375"
-        data-dailylabel="250+"
+        data-dailylabel="250+ pages"
         data-label="7500+ pages"
         label="7500+ pages"></option>
     
@@ -165,16 +191,16 @@
     id="downloads"
     name="Movie downloads"
     list="downloads-markers"
-    max="12530"
+    max="12798"
     value="0"
     class="data calculator__data" />
   <datalist class="calculator__datalist" id="downloads-markers">
     
       <option
         value="0"
-        data-dailylabel="0 movies"
-        data-label="0 movies"
-        label="0 movies"></option>
+        data-dailylabel="0 mins"
+        data-label="0"
+        label="0"></option>
     
       <option
         value="4266"
@@ -189,10 +215,10 @@
         label="20"></option>
     
       <option
-        value="12530"
-        data-dailylabel="1 movies+"
-        data-label="30 movies+"
-        label="30 movies+"></option>
+        value="12798"
+        data-dailylabel="1+ movies"
+        data-label="30+ movies"
+        label="30+ movies"></option>
     
   </datalist>
 </div>
@@ -275,7 +301,7 @@
     id="apps"
     name="Apps and games"
     list="apps-markers"
-    max="3070"
+    max="3150"
     value="0"
     class="data calculator__data" />
   <datalist class="calculator__datalist" id="apps-markers">
@@ -338,8 +364,8 @@
       <option
         value="0"
         data-dailylabel="0 emails"
-        data-label="0 emails"
-        label="0 emails"></option>
+        data-label="0"
+        label="0"></option>
     
       <option
         value="300"
@@ -374,7 +400,7 @@
       class="data-text calculator__data-text-option"
       checked />
     <span>Unlimited:
-      <b> $4.50</b>
+      <b>$4.50</b>
     </span>
   </label>
   <label for="talk-2">
@@ -385,7 +411,7 @@
       value="2.50"
       class="data-text calculator__data-text-option" />
     150:
-    <b> $2.50</b>
+    <b>$2.50</b>
   </label>
   <label for="talk-3">
     <input
@@ -395,7 +421,7 @@
       value="1.50"
       class="data-text calculator__data-text-option" />
     50:
-    <b> $1.50</b>
+    <b>$1.50</b>
   </label>
   <label for="talk-4">
     <input
@@ -405,7 +431,7 @@
       value="0"
       class="data-text calculator__data-text-option" />
     None:
-    <b> $0</b>
+    <b>$0</b>
   </label>
 </div>
 </div>
@@ -424,12 +450,12 @@
         <path d="M14.1114 13.7299L11.417 12.1743L13.753 8.12819L5.88927 11.3779L8.58366 12.9335L6.25025 16.975L14.1114 13.7299Z" fill="#789194" />
       </svg>
 
-      Video / Speed Optimiser</span>
+      Video/Speed Optimizer</span>
     <input
       type="checkbox"
       id="optimiser-2"
       name="optimiser[]"
-      class="data-optimiser calculator__data-text-option" />
+      class="data-optimiser optimizer calculator__data-text-option" />
   </label>
   <p class="calculator__help-text-panel closed background--tertiary">
     MobileX’s
@@ -442,7 +468,7 @@
   <p class="calculator__help-text">
     Ok so here’s your mobile data prediction, based on the estimates
     you’ve made above.</p>
-  <p class="calculator__help-text">
+  <p class="calculator__help-text bolder">
     <b>REMEMBER—mobile data isn’t used whenever you’re on a WiFi network, like at home or at work.</b>
   </p>
 </div>
@@ -464,9 +490,10 @@
       platform fee)</i>
   </div>
 </div>
+
   </section>
   <section class="phone">
-    <img class="phone-highlight">
+  <img class="phone-highlight">
     <div class="phone-content">
       <svg
         width="418"
@@ -513,9 +540,12 @@
     </div>
   </section>
 </form>
- 
+
+  <p class="footer-divider">&nbsp;</p>
+<p class="footer-content">Slider figures in bold above represent national averages for data use. Data consumption figures represented are approximate only. Pricing based on $2.10/GB plus $1.99 platform fee—no other taxes or fees are included (but may be applicable).
+</p>
+
     </main>
     <script src="./js/main.js"></script>
   </body>
 </html>
-
